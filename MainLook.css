@@ -1,15 +1,17 @@
 body{
-    background-color: beige;
+    background-color: rgb(212, 245, 243);
 }
 h1 {
-    background-color: beige;
-    color: blue;
+    background-color: rgb(212, 245, 243);
+    color: rgb(2, 2, 150);
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
+    
 }
 h2 {
-    color: blueviolet;
+    color: rgb(93, 30, 153);
     font-family: 'Titillium Web', sans-serif;
+    
 }
 p {
     color: black;
