@@ -1,29 +1,117 @@
 body{
     background-color: rgb(212, 245, 243);
 }
+
 h1 {
     background-color: rgb(212, 245, 243);
     color: rgb(2, 2, 150);
     text-align: center;
-    font-family: 'Titillium Web', sans-serif;
-    
+    font-family: 'Arial', sans-serif;  
 }
+
 h2 {
     color: rgb(93, 30, 153);
-    font-family: 'Titillium Web', sans-serif;
-    
+    font-family: 'Arial', sans-serif; 
 }
+
 p {
     color: black;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
+
 ul {
     color: black;
-    font-family:'Titillium Web', sans-serif ;
+    font-family:'Arial', sans-serif ;
 }
+
 nav {
     color: black;
 }
+
 h3 {
     text-align: center;
 }
+
+.topnav {
+    background-color: rgb(0, 158, 158);
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 17px; 
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn{
+    background-color: dodgerblue;
+    color: white;
+}
+
+.topnav a:active{
+    background-color: navy;
+    color: white;
+}
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px 14px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .submenu {
+    display: block;
+  }
+
+  .submenu{
+      
+      margin: 0;
+      padding: inherit;
+      text-decoration: none;
+      position: absolute;
+      background-color: rgb(0, 158, 158);
+      display: none;
+  }
+  .submenu:hover{
+      display: block;
+  }
+
+  #NavMenu
+  ul > li{
+      list-style-type: none;
+  }
