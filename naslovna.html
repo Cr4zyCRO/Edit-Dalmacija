@@ -3,7 +3,6 @@
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="slike/favicon.ico">
     <link rel="stylesheet" type="text/css" href="MainLook.css">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     
     <title>Digitalizacija u osnovama elektrotehnike</title>
@@ -11,45 +10,57 @@
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-        <a class="active" href="naslovna.html">Naslovnica</a>
         
-        <div class="dropdown" href="ohmskiotpor.html" id="NavMenu">
+        <a class="active" href="naslovna.html">Home</a>
+        
+        <div class="dropdown" id="NavMenu">
             <button class="dropbtn">Otpor</button>
             <ul class="submenu" >
-            <li> <a href="ohmskiserija.html">Serijski spoj</a></li>
-            <li> <a href="ohmskiparalela.html">Paralelni spoj</a></li>
-            <li> <a href="ohmskimjesovito.html">Mješoviti spoj</a></li>
+            <li> <a href="RSerija.html">Serijski spoj</a></li>
+            <li> <a href="RParalela.html">Paralelni spoj</a></li>
+            <li> <a href="RMjesovito.html">Mješoviti spoj</a></li>
             </ul>
         </div>
 
-        <div class="dropdown" href="kapacitivniotpor.html" id="NavMenu">
-            <button class="dropbtn">Kapacitet</button>
+        <div class="dropdown" id="NavMenu">
+            <button class="dropbtn">Zavojnica</button>
             <ul class="submenu" >
-                <li><a href="kapacitivniserija.html">Serijski spoj</a></li>
-                <li><a href="kapacitivniparalela.html">Paralelni spoj</a></li>
-                <li><a href="kapacitivnimjesovito.html">Mješoviti spoj</a></li>
+                <li><a href="LSerija.html">Serijski spoj</a></li>
+                <li><a href="LParalela.html">Paralelni spoj</a></li>
+                <li><a href="LMjesovito.html">Mješoviti spoj</a></li>
             </ul>
         </div>
 
-        <div class="dropdown" href="induktivniotpor.html" id="NavMenu">
-            <button class="dropbtn">Induktivitet</button>
+        <div class="dropdown" id="NavMenu">
+            <button class="dropbtn">Kondenzator</button>
             <ul class="submenu" >
-                <li><a href="induktivniserija.html">Serijski spoj</a></li>
-                <li><a href="induktivniparalela.html">Paralelni spoj</a></li>
-                <li><a href="induktivnimjesovito.html">Mješoviti spoj</a></li>
+                <li><a href="CSerija.html">Serijski spoj</a></li>
+                <li><a href="CParalela.html">Paralelni spoj</a></li>
+                <li><a href="CMjesovito.html">Mješoviti spoj</a></li>
+            </ul>
+        </div>
+        
+        <div class="dropdown" id="NavMenu">
+            <button class="dropbtn">RLC</button>
+            <ul class="submenu">
+                <li><a href="LC.html">LC</a></li>
+                <li><a href="RC.html">RC</a></li>
+                <li><a href="RL.html">RL</a></li>
             </ul>
         </div>
 
-        <a href="RLC.html">Mješovito</a>
     </div>
 
    <h1><em>Osnove elektrotehnike</em></h1>
    
    <h2>Što je to elektrotehnika</h2>
-        <p>Elektrotehnika je primijenjena znanost čije je polje istraživanja teorija i praksa proizvodnje, prijenosa i uporabe električne energije.
-         Elektrotehnika kakvu je danas poznajemo ima duboke korijene u elektromagnetizmu koji je neodvojivi dio fizike.
-         U samim početcima elektrotehnika se dijelila na područje "jake" i "slabe" struje.
-         Brzim razvojem elektrotehnike unutar sveprisutnog znanstvenog i tehnološkog napretka, u elektrotehnici danas razlikujemo nešto određenija područja rada i istraživanja gdje možemo spomenuti, na primjer, područja:
+        <p>
+            Elektrotehnika je primijenjena znanost čije je polje istraživanja teorija i praksa proizvodnje, prijenosa i uporabe električne energije.
+        <br>Elektrotehnika kakvu je danas poznajemo ima duboke korijene u elektromagnetizmu koji je neodvojivi dio fizike.
+        <br>U samim početcima elektrotehnika se dijelila na područje "jake" i "slabe" struje.
+        <br>Brzim razvojem elektrotehnike unutar sveprisutnog znanstvenog i tehnološkog napretka, 
+            u elektrotehnici danas razlikujemo nešto određenija područja rada i istraživanja gdje možemo spomenuti, na primjer, područja:
+
          <ul>
              <li>Elektroenergetika</li>
              <li>Elektronika</li>
@@ -58,12 +69,23 @@
              <li>Radiokomunikacije</li>
              <li>Telekomunikacije</li>
         </ul>
+
     <h2>Značaj elektrotehnike u svakodnevnom životu</h2>
-        <p>Današnji je život teško zamisliti bez primjene elektrotehnike. Ona ulazi u sve dijelove naše svakodnevnice: od rasvjete, radija i televizije, preko industrijskih i transportnih sustava, do komunikacija i računala.</p>
-    <h2>Temelji elektrotehinke</h2>   
-        <p>Sva gore navedena područja elektrotehnike,iako zvuče različito,imaju zajedničke osobine.Svima je zajedničo da njiove elemente možemo prikazati kao trošila tj. otpore koji mogu biti različitih tipova trošila.
-           Neovisno o naponskoj razini ili vrsti struje na kojoj oni rade, istosmjera ili izmjenična,imaj nekoliko različitih načina povezivanja u svim kombinacijama. Klikom na navedenu vrstu trošila prikazat će se detalji vezano za to trošilo isto tako i njegovi spojevi:
+
+        <p>
+            Današnji je život teško zamisliti bez primjene elektrotehnike.
+            Ona ulazi u sve dijelove naše svakodnevnice: od rasvjete, radija i televizije, preko industrijskih i transportnih sustava, do komunikacija i računala.
         </p>
+
+    <h2>Temelji elektrotehinke</h2> 
+
+        <p>
+            <br>Sva gore navedena područja elektrotehnike,iako zvuče različito,imaju zajedničke osobine.
+            <br>Svima je zajedničo da njiove elemente možemo prikazati kao trošila tj. otpore koji mogu biti različitih tipova trošila.
+            <br>Neovisno o naponskoj razini ili vrsti struje na kojoj oni rade, istosmjera ili izmjenična,imaj nekoliko različitih načina povezivanja u svim kombinacijama. 
+            <br>Klikom na navedenu vrstu trošila prikazat će se detalji vezano za to trošilo isto tako i njegovi spojevi:
+        </p>
+
 <nav>
      <ul>
         <li><a href="ohmskiotpor.html">Ohmski otpor</a></li>

@@ -32,86 +32,69 @@ h3 {
     text-align: center;
 }
 
+/* Boja za top navigation */
 .topnav {
     background-color: rgb(0, 158, 158);
     overflow: hidden;
 }
 
+/* Uređivanje linkova unutar top navigation */
 .topnav a {
     float: left;
     color: black;
     text-align: center;
     padding: 10px 14px;
     text-decoration: none;
-    font-size: 17px; 
+    font-size: 17px;
 }
 
+/* Boja za linkove kada kursor stoji iznad */
 .topnav a:hover, .dropdown:hover .dropbtn{
     background-color: dodgerblue;
     color: white;
 }
 
+/* Boja kada kliknemo kursorom*/
 .topnav a:active{
     background-color: navy;
     color: white;
 }
 
+/* Položaj za dropdown */
 .dropdown{
     float: left;
     overflow: hidden;
 }
 
+/* Izgled unutar dropdown */
 .dropdown .dropbtn{
     font-size: 16px;
     border: none;
     outline: none;
-    color: black;
+    color: rgb(0, 0, 0);
     padding: 10px 14px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: black;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+/* Prikaz za submenu kada kurser lebdi iznad dropdowna*/
+.dropdown:hover .submenu {
+    display: block;
   }
 
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 10px 14px;
+/* Izgled za submenu*/
+.submenu{  
+    margin: 0;
+    padding: 8px 12px;
     text-decoration: none;
-    display: block;
-    text-align: left;
+    position: absolute;
+    background-color:  rgb(0, 158, 158);
+    display: none;
   }
 
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-
-  .dropdown:hover .submenu {
-    display: block;
-  }
-
-  .submenu{
-      
-      margin: 0;
-      padding: inherit;
-      text-decoration: none;
-      position: absolute;
-      background-color: rgb(0, 158, 158);
-      display: none;
-  }
-  .submenu:hover{
-      display: block;
-  }
-
+/* Mijenja izgled liste unutar dropdowna */
   #NavMenu
   ul > li{
-      list-style-type: none;
+    list-style-type: none;
   }
