@@ -5,6 +5,10 @@
     <link rel="stylesheet" type="text/css" href="MainLook.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
     <title>Kapacitivni otpor</title>
 </head>
 <body>
@@ -50,10 +54,79 @@
 
     </div>
 
-    <h1><em>Kapacitivni otpor</em></h1>
+    <h1>Pojam električnog kapaciteta</h1>
+    <p>
+        Priključimo li međusobno izolirane pločaste elektrode na izvor, 
+        na njima će se pod utjecajem napona izvora razdvojiti jednake količine naboja suprotnog predznaka, 
+        koji će u izolatoru među pločama stvoriti električno polje. 
+        <br>
+        <br>
+        Odspojimo li potom elektrode izvora, 
+        razdvojeni naboj ostat će i dalje na pločama vezani međusobno električnom silom, 
+        a odvojeni dielektrikom u kojem stvaraju električno polje.
+        <br>
+        <br>
+        Na taj način, u ovom sustavu vodljivih elektroda
+        razdvojenih izolatorom, može se <i>pohraniti</i> električni naboj.
+        <strong>
+            Količina pohranjenoog naboja Q pritom je razmjerna naponu U između elektroda.
+        </strong>
+        <br>
+        \[Q \sim U \]
+        <br>
+        To znači da je za određeni sustav elektroda (i vrstu izolatora)
+        stalan omjer između pohranjenog naboja Q i napona U među elektrodama.
+        Taj omjer naziva se <b>električni kapacitet</b> sustava. Oznaka kapaciteta
+        je C, a jedinica je <b>farad</b> (F)
+        <br>
+        \[C = {Q \over U} \qquad [C]={As \over V} = F\] 
+        Sustav vodljivih tijela ima kapacitet od 1 F, 
+        ako uz napon od 1 V može pohraniti naboj od 1 As.
+        <br>
+        <br>
+        U stvarnosti su kapaciteti mnogistruko manji od 1 F,
+        do reda veličine nF (10<sup>-9</sup>F) i pF (10<sup>-12</sup>F).
+        <br>
+        <br>
+        <strong>
+            Kapacitet pokazuje sposobnost tijela da se po utjecajem napona pohranjuje naboj.
+        </strong> 
+        <br>
+        <br>
+        Između bilo koja dva, međusobno izolirana, vodljiva tijela postoji neki kapacitet.
+    </p>
+
     <li><a href="kapacitivniserija.html">Serijski spoj</a></li>
     <li><a href="kapacitivniparalela.html">Paralelni spoj</a></li>
     <li><a href="kapacitivnimjesovito.html">Mješoviti spoj</a></li>
 
+
+
+
+    <h1><em>Kapacitet u krugu izmjenične struje</em></h1>
+    <p>
+        Dovede li se na kondenzator kapaciteta C izmjenični napon,
+        zbog stalne promjene polariteta napona, kondenzator se naizmjenično nabija i izbija.
+        <br>
+        <br>
+        Kako naboji pritom struje naizmjenično na ploče kondenzatora i s njih,
+        kroz kapacitet kao da teče izmjenična struja.
+    </p>
+
+    <h2><em>Kapacitivni otpor</em></h2>
+    <p>
+        Uz sinusoidni napon, u krugu s kapacitetom C i struja je sinusoidnog
+        oblika i jednake frekvencije.
+        <br><br>
+        Amplituda (vršna vrijednost) struje I<sub>m</sub> pritom je
+        razmjerna amplitudi napona U<sub>m</sub>, kružnoj frekvenciji ω 
+        i kapacitetu kondenzatora C, tako da je
+        \[I_m = ω \times C \times U\]
+        Omjer amplituda napona i struje ovdje određuje otpor koji kapacitet
+        predstavlja izmjeničnoj struji. Taj se otpor naziva <i>kapacitivni otpor</i>
+        i označava s X<sub>C</sub>.
+        \[{U_m \over I_m} = {U \over I} = {1 \over ω \times C} = X_C\]
+    </p>
+    
 </body>
 </html>
