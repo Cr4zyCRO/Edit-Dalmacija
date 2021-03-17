@@ -11,7 +11,8 @@ h1 {
 
 h2 {
     color: rgb(93, 30, 153);
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Arial', sans-serif;
+    text-align: center; 
 }
 
 p {
@@ -100,3 +101,14 @@ h3 {
   ul > li{
     list-style-type: none;
   }
+
+.ListaZaSMP{
+    text-align: center;
+    list-style-type: none;
+}
+
+.VoditeljNaslova{
+    text-align: center;
+    list-style-type: none;
+
+}
