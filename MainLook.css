@@ -25,6 +25,9 @@ p {
 ul {
     color: black;
     font-family:'Arial', sans-serif ;
+    text-align: center ;
+    list-style-type: none;
+    
 }
 
 nav {
@@ -110,5 +113,14 @@ h3 {
 .VoditeljNaslova{
     text-align: center;
     list-style-type: none;
+    
+    
+}
+.AVodNas{
+    background-color: rgb(0, 158, 158);
+    padding: 10px 10px;
+    color: oldlace;
+    font-style: italic;
+    text-decoration: none;
 
 }
