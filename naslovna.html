@@ -1,56 +1,35 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="slike/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="MainLook.css">
+    <link rel="shortcut icon" type="image/x-icon" href="slike/LOGO.ico">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <script src="naslovna.js"></script>
-    
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>Digitalizacija u osnovama elektrotehnike</title>
    
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        
-        <a class="active" href="naslovna.html">Home</a>
-        
-        <div class="dropdown" id="NavMenu">
-            <button class="dropbtn">Otpor</button>
-            <ul class="submenu" >
-            <li> <a href="RSerija.html">Serijski spoj</a></li>
-            <li> <a href="RParalela.html">Paralelni spoj</a></li>
-            <li> <a href="RMjesovito.html">Mješoviti spoj</a></li>
-            </ul>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo right">Elektro</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="naslovna.html">Home</a></li> 
+            <li><a href="ROhmsko.html">Otpornici</a></li>
+            <li><a href="XInduktivno.html">Zavojnice</a></li>
+            <li><a href="XKapacitivno.html">Kondenzatori</a></li>
+            <li><a href="RLC.html">RLC</a></li>
+          </ul>
         </div>
-
-        <div class="dropdown" id="NavMenu">
-            <button class="dropbtn">Zavojnica</button>
-            <ul class="submenu" >
-                <li><a href="LSerija.html">Serijski spoj</a></li>
-                <li><a href="LParalela.html">Paralelni spoj</a></li>
-                <li><a href="LMjesovito.html">Mješoviti spoj</a></li>
-            </ul>
-        </div>
-
-        <div class="dropdown" id="NavMenu">
-            <button class="dropbtn">Kondenzator</button>
-            <ul class="submenu" >
-                <li><a href="CSerija.html">Serijski spoj</a></li>
-                <li><a href="CParalela.html">Paralelni spoj</a></li>
-                <li><a href="CMjesovito.html">Mješoviti spoj</a></li>
-            </ul>
-        </div>
-        
-        <div class="dropdown" id="NavMenu">
-            <button class="dropbtn">RLC</button>
-            <ul class="submenu">
-                <li><a href="LC.html">LC</a></li>
-                <li><a href="RC.html">RC</a></li>
-                <li><a href="RL.html">RL</a></li>
-            </ul>
-        </div>
-
-    </div>
+      </nav>
 
    <h1><em>Osnove elektrotehnike</em></h1>
    
@@ -85,18 +64,8 @@
             <br>Sva navedena područja elektrotehnike,iako zvuče različito,imaju zajedničke osobine.
             <br>Svima je zajedničo da njiove elemente možemo prikazati kao trošila tj. otpore koji mogu biti različitih tipova trošila.
             <br>Neovisno o naponskoj razini ili vrsti struje na kojoj oni rade, istosmjera ili izmjenična,imaj nekoliko različitih načina povezivanja u svim kombinacijama. 
-            <br>Klikom na navedenu vrstu trošila prikazat će se detalji vezano za to trošilo isto tako i njegovi spojevi:
-
-            <nav>
-                <ul>
-                   <li><a href="ROhmsko.html">Ohmski otpor</a></li>
-                   <li><a href="XInduktivno.html">Induktivni otpor</a></li>
-                   <li><a href="XKapacitivno.html">Kapacitivni otpor</a></li>
-               </ul>
-           </nav>
-
         </p>
 
-
+        <script src="naslovna.js"></script>
 </body>
 </html>

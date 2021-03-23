@@ -1,68 +1,48 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="slike/favicon3.ico">
-    <link rel="stylesheet" type="text/css" href="MainLook.css">
+    <link rel="shortcut icon" type="image/x-icon" href="slike/Cicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Main.css" media="screen" />
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <title>Kapacitivni otpor</title>
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        
-        <a class="active" href="naslovna.html">Home</a>
-        
-        <div class="dropdown" id="NavMenu">
-            <button class="dropbtn">Otpor</button>
-            <ul class="submenu" >
-            <li> <a href="RSerija.html">Serijski spoj</a></li>
-            <li> <a href="RParalela.html">Paralelni spoj</a></li>
-            <li> <a href="RMjesovito.html">Mješoviti spoj</a></li>
-            </ul>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo right">Elektro</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="naslovna.html">Home</a></li> 
+            <li><a href="ROhmsko.html">Otpornici</a></li>
+            <li><a href="XInduktivno.html">Zavojnice</a></li>
+            <li><a href="XKapacitivno.html">Kondenzatori</a></li>
+            <li><a href="RLC.html">RLC</a></li>
+          </ul>
         </div>
+      </nav>
 
-        <div class="dropdown" id="NavMenu">
-            <button class="dropbtn">Zavojnica</button>
-            <ul class="submenu" >
-                <li><a href="LSerija.html">Serijski spoj</a></li>
-                <li><a href="LParalela.html">Paralelni spoj</a></li>
-                <li><a href="LMjesovito.html">Mješoviti spoj</a></li>
-            </ul>
-        </div>
+    <h1>KONDENZATORI</h1>
+    <h2 id="VrhC">Pojam električnog kapaciteta</h2>
 
-        <div class="dropdown" id="NavMenu">
-            <button class="dropbtn">Kondenzator</button>
-            <ul class="submenu" >
-                <li><a href="CSerija.html">Serijski spoj</a></li>
-                <li><a href="CParalela.html">Paralelni spoj</a></li>
-                <li><a href="CMjesovito.html">Mješoviti spoj</a></li>
-            </ul>
-        </div>
+    <a class="waves-effect waves-light btn-small" href="#CSerija">Serija</a>
+    <a class="waves-effect waves-light btn-small" href="#CParalela">Paralela</a>
+    <a class="waves-effect waves-light btn-small" href="#CMjesovito">Mješovito</a>
 
-        <div class="dropdown" id="NavMenu">
-            <button class="dropbtn">RLC</button>
-            <ul class="submenu">
-                <li><a href="LC.html">LC</a></li>
-                <li><a href="RC.html">RC</a></li>
-                <li><a href="RL.html">RL</a></li>
-            </ul>
-        </div>
 
-    </div>
-
-    <h1 id="VrhC">Pojam električnog kapaciteta</h1>
-    <ul class="VoditeljNaslova">
-        <li>
-            <a href="#NaslovSMP" class="AVodNas">Spoj kondenzatora</a>
-            <a href="#NaslovCuAC" class="AVodNas">Kondenzator u krugu izmjenične struje</a>
-            <a href="#NaslovXc" class="AVodNas">Kapacitivni otpor</a>
-        </li>
-    </ul>
     <p>
+        <div class="NapojPic"><img src="slike/Naboj za C.png"></div>
+        </div>
         Priključimo li međusobno izolirane pločaste elektrode na izvor, 
         na njima će se pod utjecajem napona izvora razdvojiti jednake količine naboja suprotnog predznaka, 
         koji će u izolatoru među pločama stvoriti električno polje. 
@@ -95,27 +75,13 @@
         do reda veličine nF (10<sup>-9</sup>F) i pF (10<sup>-12</sup>F).
         <br>
         <br>
-        <strong>
-            Kapacitet pokazuje sposobnost tijela da se po utjecajem napona pohranjuje naboj.
-        </strong> 
+        <b>Kapacitet pokazuje sposobnost tijela da se po utjecajem napona pohranjuje naboj.</b> 
         <br>
         <br>
         Između bilo koja dva, međusobno izolirana, vodljiva tijela postoji neki kapacitet.
     </p>
 
-    <h1 id="NaslovSMP">Serijski, paralelni i mješoviti spoj kondenzatora</h1>
-    
-    <p>
-        Kondenzatori kao elektronički elementi mogu se spojiti na tri različita načina a to su:
-        <ul class="ListaZaSMP">
-            <li><a href="kapacitivniserija.html">Serijski spoj</a></li>
-            <li><a href="kapacitivniparalela.html">Paralelni spoj</a></li>
-            <li><a href="kapacitivnimjesovito.html">Mješoviti spoj</a></li>
-        </ul>
-        
-    </p>
-
-    <h1 id="NaslovCuAC"><em>Kapacitet u krugu izmjenične struje</em></h1>
+    <h2><em>Kapacitet u krugu izmjenične struje</em></h2>
     <p>
         Dovede li se na kondenzator kapaciteta C izmjenični napon,
         zbog stalne promjene polariteta napona, kondenzator se naizmjenično nabija i izbija.
@@ -125,7 +91,7 @@
         kroz kapacitet kao da teče izmjenična struja.
     </p>
 
-    <h2 id="NaslovXc"><em>Kapacitivni otpor</em></h2>
+    <h3><em>Kapacitivni otpor</em></h3>
     <p>
         Uz sinusoidni napon, u krugu s kapacitetom C i struja je sinusoidnog
         oblika i jednake frekvencije.
@@ -138,8 +104,16 @@
         predstavlja izmjeničnoj struji. Taj se otpor naziva <i>kapacitivni otpor</i>
         i označava s X<sub>C</sub>.
         \[{U_m \over I_m} = {U \over I} = {1 \over ω \times C} = X_C\]
-        <a href="#VrhC">Povratak na vrh</a>
+        
     </p>
-    
+
+    <h1 id="CSerija">Serija</h1>
+    <h1 id="CParalela">Paralela</h1>
+    <h1 id="CMjesovito">Mješovito</h1>
+
+
+
+    <a class="waves-effect waves-light btn-small" href="#VrhC">Povratak na vrh</a>
+    <script src="naslovna.js"></script>
 </body>
 </html>
