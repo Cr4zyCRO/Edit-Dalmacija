@@ -1,19 +1,10 @@
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
+body{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16pt;
+}
 
-img {
-    max-width: 100%
+.primjeriZadataka{
+  background-color: rgb(170, 238, 231);
 }
   
-.NabojPic {
-    flex-basis: 40%;
-    max-width: 40%;
-    max-height: 40%;
-}
-.textzanabojC {
-    font-size: 20px;
-    padding-left: 20px;
-  }

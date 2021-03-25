@@ -35,9 +35,9 @@
     <h1>KONDENZATORI</h1>
     <h2 id="VrhC">Pojam električnog kapaciteta</h2>
 
-    <a class="waves-effect waves-light btn-small" href="#CSerija">Serija</a>
-    <a class="waves-effect waves-light btn-small" href="#CParalela">Paralela</a>
-    <a class="waves-effect waves-light btn-small" href="#CMjesovito">Mješovito</a>
+    <a class="waves-effect waves-light btn-small" href="#CSerija">Serijski spoj</a>
+    <a class="waves-effect waves-light btn-small" href="#CParalela">Paralelni spoj</a>
+    <a class="waves-effect waves-light btn-small" href="#CMjesovito">Mješoviti spoj</a>
 
 
     <p>
@@ -107,17 +107,163 @@
         
     </p>
 
-    <h1 id="CSerija">Serija</h1>
+    <h1 id="CSerija">Serijski spoj</h1>
+    
+    <p>
+        Spoj dvaju kondenzatora u kojem naboj iz izvora može doći samo na vanjske ploče spoja, dok su unutarnje ploče od izvora odvojene izolatorom.
+        Kako  se međutim unutarnje ploče nalaze u polju nabijenih vanjskih ploča, na njima se influencijom razdvaja naboj i to upravo tolikog iznosa koliki je naboj vanjskih ploča.
+        <br>
+        
+        Rezultat toga je da su oba kondenzatora nabijena i to jednakim količinama naboja. 
+        Međusobno jednaki naboji Q<sub>1</sub> i Q<sub>2</sub> ovako spojenih kondenzatora jednaki su ujedno i ukupnom naboju Q koji je izvor razdvojio na cijelom spoju, tj.
+
+        \[{Q_1}={Q_2}={Q}\]
+        <br>
+        Ovakav <b>spoj gdje je ukupni naboj spoja jednak naboju svakog pojedinog kondenzatora naziva se <em>serijski spoj </em>kondenzatora.</b>
+        <br>
+        <br>
+        Prema Kirchhoffovom zakonu za napone, u serijskom spoju ukupni napon na spoju U<sub>uk</sub> jednak je zbroju napona pojedinih kondenzatora, U<sub>1</sub> i U<sub>2</sub>
+
+        \[{U_{uk}}={U_1}+{U_2}\]
+
+        Uvrste li se ovi naponi izraženi pomoću naboja i kapaciteta (gdje je C<sub>uk</sub> ukupni kapacitet spoja)
+
+        \[U_{uk} = {Q \over C_{uk}} \qquad U_1 = {Q \over C_1} \qquad U_2 = {Q \over C_2}\]
+
+        dobiva se sljedeća jednadžba
+
+        \[{Q \over C_{uk}} = {Q \over C_1} + {Q \over C_2} \]
+
+        koja (djeljenjem s Q) daje izraz za ukupni kapacitet C<sub>uk</sub> serijskog soja dvaju kondenzatora
+
+        \[{1 \over C_{uk}} = {1 \over C_1} + {1 \over C_2} \quad tj. \quad C_{uk} = {{C_1 \times C_2} \over {C_1 + C_2}} \]
+
+        Općenito za serijski spoj n kondenzatora vrijedi
+
+        \[{1 \over C_{uk}} = {1 \over C_1} + {1 \over C_2} + ... + {1 \over C_n} \]
+
+        U serijskom spoju, recipročna vrijednost ukupnog kapaciteta jednaka je zbroju recipročnih vrijednosti pojedinih kapaciteta.
+        <br>
+        <br>
+        <b>Ukupni kapacitet serijskog spoja je manji od najmanjeg pojedinačnog kapaciteta.</b>
+        <br>
+        <br>
+        <b>Na serijski spojenim kondenzatorima napon se dijeli obrnuto razmjerno njihovim kapacitetima</b>
+
+        $${{U_1 \over U_2} = {C_2 \over C_1}}$$
+
+        Za serijski spoj kondenzatora kaže se da je <b>kapacitivno djelilo</b> napona.
+
+
+
+
+        <ul class="collapsible popout, primjeriZadataka">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">content_paste</i>Primjer 1</div>
+              <div class="collapsible-body"><span>
+                <b>Ako su kapaciteti kondenzatora C<sub>1</sub> = 3 pF i C<sub>2</sub> = 6 pF, a ukupni napon U = 24 V, 
+                odredite ukupni kapacitet C<sub>uk</sub> i ukupni naboj Q<sub>uk</sub> spoja, 
+                te naboje (Q<sub>1</sub> i Q<sub>2</sub>) i napone (U<sub>1</sub> i U<sub>2</sub>) na kondenzatorima.</b>
+
+                $${C_{uk} = {{C_1 \times C_2} \over {C_1 + C_2}} = {{3 \times 6} \over {3 + 6}} \ pF = {18 \over 9} \ pF = 2 \ pF}$$
+
+                $${Q_{uk} = {C_{uk} \times U} = {{2\times10^{-12} F } \times {24 \ V}} = {48 \times 10^{-12} As } = {48 \ pAs}}$$
+
+                $${Q_1 = Q_2 = Q_{uk} = 48 \ pAs}$$
+
+                $${U_1 = {Q_1 \over C_1} = {48 \ pAs \over 3 \ pF} = {16 \ V}}$$
+                $${U_2 = {Q_2 \over C_2} = {48 \ pAs \over 6 \ pF} = {8 \ V}}$$
+              </span></div>
+            </li>
+        </ul>
+    </p>
     <img src="slike/CSerija.png">
-    <h1 id="CParalela">Paralela</h1>
+
+
+    <h1 id="CParalela">Paralelni spoj</h1>
+    <p>
+        Kondenzatori na slici spojeni su tako da imaju isti napon, koji je jednak ukupnom naponu spoja
+
+        \[{U_1}={U_2}={U}\]
+
+        <b>Spoj gdje su kondenzatori priključeni na isti napon nazivamo <em>paralelni spoj</em> kondenzatora.</b>
+        <br>
+        <br>
+        Naboj je ovdje razdijeljen na pojedine kondenzatore (pozitivni na gornjim, a negativni na donjim pločama),
+        tako da je ukupni naboj spoja jednak zbroju naboja pojedinih kondenzatora, tj.
+
+        \[Q={Q_1}+{Q_2}\]
+
+        Dijeljenjem ove jednadžbe naponom U dobivamo
+
+        \[{Q_{uk} \over U}={Q_1 \over U}+{Q_2 \over U}\]
+
+        Omjer ukupnog naboja Q<sub>uk</sub> i ukupnog napona U spoja određuje ukupni kapacitet spoja C<sub>uk</sub>, pa uz
+
+        \[C_{uk} = {Q_{uk} \over U} \qquad C_1 = {C_1 \over U} \qquad C_2 = {C_2 \over U}\]
+
+        dobivamo izraz za ukupni kapacitet ovoga spoja
+
+        \[{C_{uk}}={C_1}+{C_2}\]
+
+        Općenito, za paralelni spoj n kondenzatora vrijedi
+
+        \[{C_{uk}}={C_1}+{C_2}+...+C_n\]
+
+        <b>Ukupni kapacitet paralelnog spoja kondenzatora jednak je zbroju pojedinačnih kapaciteta.</b>
+
+        Na paralelno spojenim kondenzatorima naboj se dijeli razmjerno njihovim kapacitetima
+
+        $${{Q_1 \over Q_2} = {C_1 \over C_2}}$$
+
+
+        <ul class="collapsible popout, primjeriZadataka">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">content_paste</i>Primjer 2</div>
+              <div class="collapsible-body"><span>
+                <b>Koliki najveći, a koliki najmanji kapacitet se može postići spajanjem n= 10 jednakih kondenzatora
+                    pojedinačnog kapaciteta C= 10 pF
+                </b>
+                <br>
+                Paralelnim spajanjem n kondenzatora kapaciteta C postiže se n puta veći ukupni kapacitet:
+
+                $$ C_{max} = {n \times C} = 100 \ pF $$
+
+                Serijskim spajanjem n kondenzatora kapaciteta C postiže se n puta manji ukupni kapacitet:
+
+                $$ C_{min} = {C \over n} = 1 \ pF $$
+                
+              </span></div>
+            </li>
+
+            <li>
+                <div class="collapsible-header"><i class="material-icons">content_paste</i>Primjer 3</div>
+                <div class="collapsible-body"><span>
+                  <b>U paralelnom spoju kondenzatora uz napon U= 100 V ukupni naboj je Q<sub>uk</sub>= 3,2 mAs. 
+                    Ako je kapacitet kondenzatora C<sub>1</sub>= 10 µF odredite kapacitet kondenzatora C<sub>2</sub>, 
+                    te naboje na pojedinim kondenzatorima (C<sub>1</sub> i C<sub>2</sub>).</b>
+  
+                    $$ {C_{uk} = {Q_{uk} \over U} = {{3,2 \times 10^{-3} \ As} \over {100 \ V}} = {32 \times 10^{-6} \ F } = {32 \ µF}} $$
+                    \[C_{uk} = {C_1 + C_2} \qquad C_2 = {C_{uk} - C_1} = {32 \ µF - 10 \ µF} = {22 \ µF} \] 
+                    \[Q_1 = {C_1 \times U} = {(10 \times 10^{-6} \ F) \times 100 \ V} = 10^{-3} \ As = 1 \ mAs \]
+                    \[Q_2 = {C_2 \times U} = {(22 \times 10^{-6} \ F) \times 100 \ V} = 2,2 \times 10^{-3} \ As = 2,2 \ mAs \]
+
+                </span></div>
+              </li>
+        </ul>
+
+
+    </p>
     <img src="slike/CParalela.png">
-    <h1 id="CMjesovito">Mješovito</h1>
+
+
+    <h1 id="CMjesovito">Mješoviti spoj</h1>
     <img src="slike/CMješovito.png">
 
     
 
     <br>
     <a class="waves-effect waves-light btn-small" href="#VrhC">Povratak na vrh</a>
-    <script src="naslovna.js"></script>
+    <script src="XKapacitivno.js"></script>
 </body>
 </html>
