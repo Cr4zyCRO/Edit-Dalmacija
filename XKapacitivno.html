@@ -107,6 +107,9 @@
         
     </p>
 
+
+
+
     <h1 id="CSerija">Serijski spoj</h1>
     
     <p>
@@ -178,6 +181,8 @@
         </ul>
     </p>
     <img src="slike/CSerija.png">
+
+
 
 
     <h1 id="CParalela">Paralelni spoj</h1>
@@ -257,9 +262,88 @@
     <img src="slike/CParalela.png">
 
 
-    <h1 id="CMjesovito">Mješoviti spoj</h1>
-    <img src="slike/CMješovito.png">
 
+
+    <h1 id="CMjesovito">Mješoviti spoj</h1>
+    <p>
+      Dva serijski spojena kondenzatora (C<sub>1</sub> i C<sub>2</sub>), 
+      kojim naboj iz izvora može doći samo na vanjske ploče spoja, 
+      spojeni su zajedno sa kondenzatorom C<sub>3</sub> u paralelu. 
+      Slika prikazuje tri kondenzatora u mješovitim spoju (kombinacija serijskog spoja i paralelnog spoja).
+      <br>
+      <br>
+      Rezultat ovakvog spoja je da su dva kondenzatora (C<sub>1</sub> i C<sub>2</sub>) nabijena jednakim količinama naboja 
+      i zajedno sa kondenzatorom C<sub>3</sub> dijele ukupni naboj (Q<sub>uk</sub>).
+      <br>
+      <br>
+      Da bi izračunali ukupni naboj u strujnom krugu trebamo mješoviti spoj svesti ili na serijski spoj ili na paralelni spoj.
+      <br>
+      Kod slike pomoću formule za izračunavanje ukupnog naboja u serijskom spoju kondenzatora možemo izračunati naboj Q<sub>12</sub> (naboj na kondenzatorima C<sub>1</sub> i C<sub>2</sub>).
+      Kada izračunamo naboj Q<sub>12</sub> dobiti ćemo paralelni spoj dvaju kondenzatora (C<sub>12</sub> i C<sub>3</sub>).
+      Zatim uz pomoć formule za izračunavanje ukupnog naboja u paralelnom spoju kondenzatora možemo izračunati ukupni naboj u ovom mješovitom spoju kondenzatora.
+
+      \[Q_{12}=Q_1=Q_2 \qquad Q_{uk}=Q_{12}+Q_3\]
+
+      Za izračun napona na kondenzatorima koristimo isti princip kao i u spoju kondenzatora u seriju ili paralelu.
+      Napon na kondenzatorima (C<sub>1</sub> i C<sub>2</sub>) izračunati ćemo pomoću formule 
+
+      $$U_{12} = U_1 + U_2$$
+
+      Nakon izračuna napona (U<sub>12</sub>) na kondenzatorima (C<sub>1</sub> i C<sub>2</sub>) možemo izračunati i napon na kondenzatoru C<sub>3</sub>. 
+      Za spoj kondenzatora u paralelu vrijedi da je napon na kondenzatorima jednak ukupnom naponu spoja, pa je 
+
+      $$U= U_{12} = U_3$$ 
+
+      Kod izračuna kapaciteta za mješoviti spoj kondenzatora koristimo se već proučenim znanjem. 
+      Za kapacitet C<sub>12</sub> koristimo formulu za kapacitet kod serijskog spoja kondenzatora
+      
+      $$ C_{12}={{C_1 \times C_2} \over {C_1 + C_2}} $$
+
+      Nakon izračuna kapaciteta C<sub>12</sub> možemo izračunati ukupni kapacitet strujnog kruga primjenom formule za ukupni kapacitet paralelnog spoja kondenzatora
+
+      $$ C_{uk}= C_{12} + C_3 $$
+      
+<img src="slike/CMješovito1.png">
+
+
+
+
+
+      <br>
+      Slika prikazuje još jedan način mješovitog spoja kondenzatora. 
+      Na slici dva paralelno spojena kondenzatora (C<sub>1</sub> i C<sub>2</sub>) spojeni su u seriju sa kondenzatorom C<sub>3</sub>.
+
+      Rezultat ovakvog spoja je da dva kondenzatora (C<sub>1</sub> i C<sub>2</sub>) imaju razdijeljen naboj na pojedine kondenzatore 
+      i zajedno sa kondenzatorom C<sub>3</sub> imaju jednaku količinu naboja.
+
+      Kod slike pomoću formule za izračunavanje ukupnog naboja u paralelnom spoju kondenzatora možemo izračunati naboj Q<sub>12</sub> (naboj na kondenzatorima C<sub>1</sub> i C<sub>2</sub>).
+      Kada izračunamo naboj Q<sub>12</sub> dobiti ćemo serijski spoj dvaju kondenzatora (C<sub>12</sub> i C<sub>3</sub>).
+      Zatim uz pomoć formule za izračunavanje ukupnog naboja u serijskom spoju kondenzatora možemo izračunati ukupni naboj u ovom mješovitom spoju kondenzatora.
+
+      \[Q_{12}=Q_1+Q_2 \qquad Q_{uk}=Q_{12}=Q_3\]
+
+      Za izračun napona na kondenzatorima koristimo isti princip kao i u spoju kondenzatora u seriju ili paralelu.
+      Napon na kondenzatorima (C<sub>1</sub> i C<sub>2</sub>) dobiti ćemo pomoću formule 
+
+      $$U_{12} = U_1 = U_2$$
+
+      Nakon dobivenog napona (U<sub>12</sub>) na kondenzatorima (C<sub>1</sub> i C<sub>2</sub>) možemo izračunati i napon na kondenzatoru C<sub>3</sub>. 
+      Za spoj kondenzatora u seriju vrijedi da je napon
+
+      $${U= U_{12} + U_3} \qquad U_3 = U - U_{12}$$ 
+
+      Kod izračuna kapaciteta za mješoviti spoj kondenzatora koristimo se već proučenim znanjem. 
+      Za kapacitet C<sub>12</sub> koristimo formulu za kapacitet kod paralelnog spoja kondenzatora
+      
+      $$ C_{12}=C_1 + C_2 $$
+
+      Nakon izračuna kapaciteta C<sub>12</sub> možemo izračunati ukupni kapacitet strujnog kruga primjenom formule za ukupni kapacitet serijskog spoja kondenzatora
+
+      $$ C_{uk}={{C_{12} \times C_3} \over {C_{12} + C_3}} $$
+
+      <img src="slike/CMješovito2.png">
+    </p>
+    
     
 
     <br>
