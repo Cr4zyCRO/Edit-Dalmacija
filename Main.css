@@ -2,9 +2,17 @@ body{
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: 16pt;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-.primjeriZadataka{
-  background-color: rgb(195, 241, 237);
-}
+.definicija{
+  padding: 3mm;
+  background-color: cyan;
   
+}
+
+main {
+  flex: 1 0 auto;
+}

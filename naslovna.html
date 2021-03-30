@@ -20,21 +20,21 @@
 </head>
 <body>
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo right">Elektro</a>
+        <div class="cyan accent-4 nav-wrapper"> 
+          <a href="#" class="brand-logo right black-text">Elektro</a>
           <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="naslovna.html">Home</a></li> 
-            <li><a href="ROhmsko.html">Otpornici</a></li>
-            <li><a href="XInduktivno.html">Zavojnice</a></li>
-            <li><a href="XKapacitivno.html">Kondenzatori</a></li>
-            <li><a href="RLC.html">RLC</a></li>
+            <li><a href="naslovna.html" class="black-text">HOME</a></li> 
+            <li><a href="ROhmsko.html" class="black-text">OTPORNICI</a></li>
+            <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
+            <li><a href="XKapacitivno.html" class="black-text">KONDENZATORI</a></li>
+            <li><a href="RLC.html" class="black-text">RLC</a></li>
           </ul>
         </div>
       </nav>
 
-   <h1><em>Osnove elektrotehnike</em></h1>
+   <h1><em><b>Osnove elektrotehnike</b></em></h1>
    
-   <h2>Što je to elektrotehnika</h2>
+   <h2><b>Što je to elektrotehnika</b></h2>
    
         <p>
             Elektrotehnika je primijenjena znanost čije je polje istraživanja teorija i praksa proizvodnje, prijenosa i uporabe električne energije.
@@ -52,20 +52,161 @@
              <li>Telekomunikacije</li>
         </ul>
 
-    <h2>Značaj elektrotehnike u svakodnevnom životu</h2>
+    <br>
+    <br>
+    <br>
 
-        <p>
-            Današnji je život teško zamisliti bez primjene elektrotehnike.
-            Ona ulazi u sve dijelove naše svakodnevnice: od rasvjete, radija i televizije, preko industrijskih i transportnih sustava, do komunikacija i računala.
-        </p>
 
-    <h2>Temelji elektrotehinke</h2> 
+    <h2><b>Električni naboj, napon i struja</b></h2>
 
-        <p>
-            <br>Sva navedena područja elektrotehnike,iako zvuče različito,imaju zajedničke osobine.
-            <br>Svima je zajedničo da njiove elemente možemo prikazati kao trošila tj. otpore koji mogu biti različitih tipova trošila.
-            <br>Neovisno o naponskoj razini ili vrsti struje na kojoj oni rade, istosmjera ili izmjenična,imaj nekoliko različitih načina povezivanja u svim kombinacijama. 
-        </p>
+    <h3><em>Električni naboj</em></h3>
+    <p>
+        Električna djelovanja objašnjavaju se postojanjem električnih naboja. 
+        Razlikujemo dvije crste naboja kojima dijelimo na suprotan predznak te ih nazivamo <em>pozitivni</em> i <em>negativni</em>. 
+        to je rezultat pojave da se približavanjem naboja njihova djelovanja na okolinu međusobno poništavaju.
+
+        <div class="card-panel cyan accent-4">
+            Osnovni nosioci naboja su elementarne čestice proton i elektron (neutron nema naboj). Naboji protona i elektrona suprotnog su predznaka, 
+            a istog iznosa. Taj se iznos naziva <em>elementarni</em> naboj i označava s <em>e</em>.
+            <br>
+        <b>
+            Proton je nabijen pozitivno Q<sub>p</sub>=+e, a elektron Q<sub>e</sub>=-e.
+            <br>
+            Elementarni električni naboj iznosi e ≈ 1.6 × 10<sup>-19</sup> C .
+        </b>
+        </div>
+
+        <div class="card-panel cyan accent-4">
+            <b>Oznaka veličine naboja je Q.</b>
+            <br>
+            Jedinica električnog naboja je <b>kulon</b> s oznakom C, tj.
+            $$ [Q] = C $$
+            1 C = 1 As (ampersekunda)
+        </div>    
+        
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h3><em>Električni napon</em></h3>
+    <p>
+        Pomakom naboja Q iz točke A u točku B promjenila mu se energija. 
+        Naboj je isti, što znači da su mu potencijali točaka različiti. 
+        Između točaka vlada <em>razlika potencijala</em>.
+        
+        <div class="card-panel cyan accent-4"><b>Razlika potencijala naziva se električni napon</b></div>
+        
+        Električni napon označava se slovom <em>U</em>, a iskazuje se jedinicom <b>volt</b>.
+        $$ U_{AB} = φ_B - φ_A \qquad [U] = V $$
+        Oznaka U<sub>AB</sub> znači: <em>napon točke B prema točki A.</em>
+        U<sub>AB</sub> je pozitivan ako je točka B na većem potencijalu od točke A, a negativan kada je obratno.
+
+        <ul class="collapsible popout, cyan accent-4">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">content_paste</i>Primjer 1</div>
+              <div class="collapsible-body"><span>
+                <b>Potencijal točke A je φ<sub>A</sub>= 5 V, a potencijal točke B je φ<sub>B</sub>= 30 V. Koliki je napon U<sub>AB</sub>, a koliki napon U<sub>BA</sub> ?</b>
+
+                $$ U_{AB} = φ_A - φ_B = 5 V - 30 V = -25 V$$
+                $$ U_{BA} = - U_{AB} = 25 V$$
+
+                <em>Naponi U<sub>AB</sub> i napona U<sub>BA</sub> suprotnih su predznaka</em>.
+
+              </span></div>
+            </li>
+        </ul>
+
+    </p>
+
+    <br>
+
+    <h4>Oblici električnog napona</h4>
+    <p>
+        Prema obliku vremenske promjene napona razlikujemo više vrsta napona, kao npr. stalni (ili kontinuirani), pravokutni, pilasti, sinusoidni i sl.
+        <br>
+        Dijelimo ih u osnovi na <em>istosmjerne</em> i <em>izmjenične</em>. 
+        
+        <div class="card-panel cyan accent-4"><b>Istosmjerni napon stalnog je potencijala, a kod izmjeničnog polaritet se naizmjenično mijenja.</b></div>
+        
+        Od posebne važnosti u praksi su: istosmjerni napon stalnog iznosa (prikazan na slici), 
+        te izmjenični napon čija vremenska promjena ima oblik sinusne funkcije (sinusoide) prikazan na slici. 
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h3><em>Električna struja</em></h3>
+    <p>
+        Među raznoimenim nabojima razdvojenim na priključnicama izvora vlada privlačna sila.
+        Ako se priključnice izvana vidljivo spoje, između naboja se uspostavi vodljivi put kroz koji nastaje gibanje naboja koje nazivamo <em>električna struja</em>. 
+
+        <div class="card-panel cyan accent-4"><b>Električna struja je usmjereno gibanje naboja.</b></div>
+
+        Slobodno gibanje elektrona u bakru nije struja, jer se slobodni elektroni tamo gibaju nasumice u raznim smjerovima.
+        <br>
+        <br>
+        Spoji li se međutim komad bakra između priključnica izvora, zbog napona (razlike potencijala) 
+        između njegovih krajeva u bakru se javlja el. sila koja tjera (usmjerava) elektrone od mjesta 
+        gdje ima višak elektrona (niži potencijal) prema mjestu gdje je manjak elektrona (viši potencijal).
+        <br>
+        <br>
+        Tako nastaje usmjereno gibanje elektrona koje nazivamo električna struja.
+
+        <div class="card-panel cyan accent-4"><b><em>Uzrok struje je napon (elektromotorna sila).</em></b></div>
+
+        To znači: postoji li između dviju točaka napon (razlika potencijala) tada će, 
+        kad se one vidljivo spoje, među njima doći do usmjerenog gibanja naboja, tj. 
+        među njima će poteći električna struja. 
+    </p>
+
+    <br>
+
+    <h4>Jakost struje</h4>
+    <p>
+        Glavna značajka električne struje je njena <em>jakost</em>. 
+        Jakost struje je veća što više naboja prođe poprečnim presjekom vodiča u 1 sekundi.
+        Oznaka jakosti struje je <em>I</em>, a jedinica je <b>amper</b> (A).
+        $$ I={Q \over t} \qquad [I]={As \over s}= A $$
+
+        <ul class="collapsible popout, cyan accent-4">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">content_paste</i>Primjer 1</div>
+              <div class="collapsible-body"><span>
+                <b>Koliko iznosi naboj u jednoj sekundi kroz presjek metalne žice kojom protječe struja stalne jakosti I= 1 A ?</b>
+
+                $$ Q = I \times t = 1 A \times 1 s = 1 As = 1 C $$
+
+                <em>Kroz presjek vodiča u 1 sekundi prođe količina naboja Q= 1 C</em>.
+
+              </span></div>
+            </li>
+        </ul>
+    </p>
+
+
+
+    <footer class="page-footer cyan accent-4">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="grey-text text-darken-3">Osnove elektrotehnike</h5>
+              <p class="grey-text text-darken-3">Osnovni podatci u osnovama elektrotehnike.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="grey-text text-darken-3">Poveznice</h5>
+              <ul>
+                <li><a class="grey-text text-darken-3" href="#!">HOME</a></li>
+                <li><a class="grey-text text-darken-3" href="#!">Električni Naboj</a></li>
+                <li><a class="grey-text text-darken-3" href="#!">Električni Napon i Struja</a></li>
+                <li><a class="grey-text text-darken-3" href="#!">Električna Snaga</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
 
         <script src="naslovna.js"></script>
 </body>
