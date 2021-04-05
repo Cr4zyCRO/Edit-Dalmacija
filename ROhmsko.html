@@ -27,28 +27,144 @@
             <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
             <li><a href="XKapacitivno.html" class="black-text">KONDENZATORI</a></li>
             <li><a href="RLC.html" class="black-text">RLC</a></li>
+            <li><a href="zadatci.html" class="black-text">ZADATCI</a></li>
           </ul>
         </div>
       </nav>
 
     <h1><em>Ohmski otpor</em></h1>
-        <h2>Što je to otpor ?</h2>
-            <p>Otpor ili električni otpor (oznaka R) je fizikalna veličina koja opisuje utjecaj vrste tvari, duljine i debljine električnog vodiča ili električnog izolatora na tok električne struje.
-             Električni otpor R vodiča kroz koji teče istosmjerna električna struja može se izračunati nakon mjerenja ampermetrom i voltmetrom s pomoću odnosa:
-            \[R = {U \over I}\]
-            </p>
-            <p>
-                Gdje je :<ul>
-                                <li>R= Otpor</li>
-                                <li>U= Napon na trošilu</li>
-                                <li>I= Struja kroz trošilo</li>
-                        </ul>
-            </p>
-            <p>
-                Otpor također ovisi o duljini samog vodiča,njegovom presjeku,materijala od kojeg je napravljen te o vanjskoj temperaturi. Zbog jednostavnijeg računanja
-                zbog same jednostavnosti računa i zbog toga što su ti otpori gotovo zanemarivi mi ih ne koristimo.
-            </p>
-            <p>Ohmska trošila kao i sva druga možemo spojiti na tri načina:
+
+
+    <h2>Električni otpor</h2>
+    <img src="slike/Otporno_djelovanje.jpg" style="size: 20px 25px;">
+      <p>
+          Pri toku struje kroz metalnu žicu (vodič) slobodni elektroni nailaze na atome koji 
+          (zbog topline) titraju oko svojih ravnotežnih položaja u kristalnoj rešetki materijala.
+          Možemo zamisliti da atomi tako priječe slobodni put elektronima, 
+          što se očituje kao <em>opiranje</em> tvari protoku električne struje.
+          <br>
+          <br>
+          Ovim otporom ograničena je jakost struje, a za njegovo razumijevanje 
+          zgodna je zamisao sudara elektrona s atomima u metalu. 
+          <br>
+          <br>
+          Elektroni sudarom gube dio energije, pa <em>za održavanje struje (zbog otpora) treba trošiti rad</em>. 
+          Atom sudarom dobiva energiju, čime se pojačava njegovo titranje, a to znači povećanje temperature.
+          
+          <div class="card-panel cyan accent-4"><b>Vodič protjecan strujom se zagrijava.</b></div>
+
+          Ne samo kod struje elektrona u krutini, nego i kod struje iona u 
+          vodljivoj tekućini javlja se otpor na čije svladavanje naboji troše rad. 
+          Otporno djelovanje javlja se čak i kod struje u vodljivom plinu.
+          <br>
+          <br>
+          Općenito, naboji pri strujanju nailaze na otporna djelovanja za svladavanje kojih troše rad.
+          Ta otporna djelovanja nazivaju se <b>električni radni otpor</b> 
+          (kraće <em>električni otpor</em>, ili samo <em>otpor</em>).
+          <br>
+          <br>
+          Oznaka za električni otpor je <em>R</em>, a jedinica je <b>om</b>. 
+          Oznaka za om je Ω (grčko slovo <em>omega</em>).
+
+          $$ [R] = Ω $$
+      </p>
+
+
+      <h3>Otpor vodiča</h3>
+      <p>
+          Otpor vodiča razmjeran je duljini vodiča <em>l</em>, a obrnuto razmjeran njegovom presjeku <em>S</em>. 
+          <br>
+          <br>
+          Faktor razmjernosti različit je za pojedini materijal te predstavlja svojstvo tvari 
+          koja se naziva <em>otpornost</em> (ili specifični otpor) i označava s ρ (grčko slovo ro).
+          <br>
+          <br>
+          Na temelju toga, otpor vodiča računa se kao 
+
+          $$ R = ρ {l \over S} $$
+
+          Ova jednadžba pokazuje da će npr. dvaput dulja žica (istog presjeka i materijala) imati dvaput veći el. otpor, 
+          dok će žica dvaput većeg presjeka (iste duljine i materijala) imati upola manji otpor.
+      </p>
+
+
+      <h3>Električna vodljivost</h3>
+      <p>
+          <b>El. vodljivost</b> <em>je recipročna vrijednost otpora.</em>
+          <br>
+          <br>
+          Oznaka vodljivosti je <em>G</em>, a jedinica je <b>simens</b> (S)
+
+          $$ G = {1 \over R} \qquad [G]={1 \over Ω}=S $$
+
+          Vodljivost je kao i otpor, svojstvo fizičkog tijela.
+          Obrnuto od otpora, koji pokazuje koliko se tijelo opire protjecanju struje,
+          vodljivost pokazuje kolikon dobro tijelo vodi struju.
+      </p>
+
+      <h2>Ohmov zakon</h2>
+      <img src="slike/Otpor_Vodljivost_SK.jpg">
+
+      <p>
+          Uočeno je da jakost struje u krugu ovisi samo o naponu i otporu kruga. 
+          Pokazuje se da jakost struje <em>I</em> raste s naponom <em>U</em>, a 
+          opada s porastom otpora <em>R</em>. Napiše li se to u obliku jednadžbe,
+          dobiva se jedan od temeljnih zakona elektrotehnike, poznat kao Ohmov zakon:
+          
+          $$ I = {U \over R} $$
+
+          Ohmov zakon može se općenito iskazati ovako:
+
+        <div class="card-panel cyan accent-4">
+            <b>
+                U zatvorenom strujnom krugu jakost struje <em>I</em> razmjerna je
+                priključenom naponu <em>U</em>, a obrnuto razmjerna otporu kruga <em>R</em>.
+            </b>
+        </div>
+
+          Ohmov zakon može se napisati u tri oblika:
+
+          $$ {I = {U \over R}} \qquad {U = I \cdot R} \qquad {R = {U \over I}} $$
+
+          koji se mogu izraziti na sljedeće načine:
+
+          <ul>
+              <li>
+                  - izvor daje struju jakosti <em>I</em> koja je jednaka omjeru napona izvora <em>U</em> i otpora kruga <em>R</em>; ili
+              </li>
+              <li>
+                  - napon <em>U</em> na otporniku jednak je umnošku otpora <em>R</em> i jakosti struje <em>I</em> otpornika; ili
+              </li>
+              <li>
+                  - otpor otpornika <em>R</em> jednak je omjeru napona na otporniku <em>U</em> i jakosti struje kroz otpornik <em>I</em>.
+              </li>
+          </ul>
+
+          Iz zadnje jednadžbe proizlazi i definicija jedinice električnog otpora, tj. 1 V kroz 1 A daje 1 Ω:
+
+          $$ [R]={V \over A}=Ω $$
+
+          Umjesto otpora u Ohmov zakon može se uvesti i njegova recipročna vrijednost tj. <em>vodljivost</em> G (G=1/R), pa se dobiju sljedeći izrazi:
+
+          $$ {I = G \cdot U} \qquad {U = {I \over G}} \qquad {G = {I \over U}} $$
+
+          iz čega proizlazi i definicija za jedinicu el. vodljivosti (simens), tj. 1 A kroz 1 V daje 1 S:
+
+          $$ [G]={A \over V}=S={1 \over Ω} $$
+      </p>
+
+
+
+
+
+
+
+
+
+
+
+
+        
                     <ul class="ListaZaSMP">
                         <li>
                             <a href="RSerija.html">Serijski spoj</a>
