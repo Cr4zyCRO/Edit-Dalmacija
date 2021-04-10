@@ -64,4 +64,87 @@ function zadatak4(){
         
         alert("Struja koju daje izvor je " + strujat + "A")
 }
+function zadatak5(){
+    let kondezatorc1 = Number(prompt("Unesite vrijednost kondezatora C1 (u F)"))
+    let kondezatorc2 = Number(prompt("Unesite vrijednost kondezatora C2 (u F)"))
+    let kondezatorc3 = Number(prompt("Unesite vrijednost kondezatora C3 (u F)"))
+    let naponc = Number(prompt("Unesite iznos napona U (u V)"))
 
+            ukupni1c = (1 / kondezatorc1 ) + (1 / kondezatorc2) + (1 / kondezatorc3)
+            ukupnic = 1 / ukupni1c
+            Qc = ukupnic * naponc
+            uc1 = Qc / kondezatorc1
+            uc2 = Qc / kondezatorc2
+            uc3 = Qc / kondezatorc3
+
+        alert("Ukupni kapacitiet spoja je " + ukupnic + "F")
+        alert("Ukupna kolicina naboja je " + Qc + "C")
+        alert("Napon na kondezatoru C1 " + uc1 + "V")
+        alert("Napon na kondezatoru C2 " + uc2 + "V")
+        alert("Napon na kondezatoru C3 " + uc3 + "V")        
+}
+function zadatak6(){
+    let snagap1 = Number(prompt("Kolika je snaga na otporniku P1"))
+    let otporp2 = Number(prompt("Koliko iznosi otpor R2"))
+    let strujap = Number(prompt("Unesite vrijednost struje izvora I"))
+
+            b = otporp2 *   strujap
+            b2 = b * b
+            cetriac = 4 * otporp2 * snagap1
+            dvaa = 2 * otporp2
+            strujap = (b + Math.sqrt(b2 - cetriac)) / dvaa
+            strujakva = strujap * strujap
+            otporp1 = snagap1 / strujakva
+            naponp = strujap * otporp1
+
+        alert("Iznos otpora R1 je " + otporp1 + "Ohma")
+        alert("Napon izvora je " + naponp + "V")
+}
+function zadatak7(){
+    let otpora1 = Number(prompt("Kolika je vrijednost otpora R1"))
+    let otpora2 = Number(prompt("Kolika je vrijednost otpora R2"))
+    let otpora3 = Number(prompt("Kolika je vrijednost otpora R3"))
+    let otpora4 = Number(prompt("Kolika je vrijednost otpora R4"))
+    let otpora5 = Number(prompt("Kolika je vrijednost otpora R5"))
+    let otpora6 = Number(prompt("Kolika je vrijednost otpora R6"))
+    let naponaa = Number(prompt("Unesite vrijednost napona izvora U"))
+
+            otpora12 = (otpora1 * otpora2) / (otpora1 + otpora2)
+            otpora123 = (otpora12 * otpora3 ) / (otpora12 + otpora3)
+            otpora45 = otpora4 + otpora5
+            otpora456 = (otpora45 * otpora6) / (otpora45 + otpora6)
+            otporau = otpora123 + otpora456 
+            strujaizvoraa = naponaa / otporau
+            padu1a = strujaizvoraa * otpora123
+            padu2a = strujaizvoraa * otpora456
+            strujaa1 = padu1a / otpora1
+            strujaa2 = padu1a / otpora2
+            strujaa3 = padu1a / otpora3
+            strujaa4 = padu2a / otpora45
+            strujaa5 = padu2a / otpora6
+        
+        alert("Struja I1 iznosi " + strujaa1 + "A")
+        alert("Struja I2 iznosi " + strujaa2 + "A")
+        alert("Struja I3 iznosi " + strujaa3 + "A")
+        alert("Struja I4 iznosi " + strujaa4 + "A")
+        alert("Struja I5 iznosi " + strujaa5 + "A")
+}
+function zadatak8(){
+    let otporz1 = Number(prompt("Kolika je vrijednost otpora R1"))
+    let otporz2 = Number(prompt("Kolika je vrijednost otpora R2"))
+    let otporz3 = Number(prompt("Kolika je vrijednost otpora R3"))
+    let otporz4 = Number(prompt("Kolika je vrijednost otpora R4"))
+
+            otporz12 = (otporz1 * otporz2) / (otporz1 + otporz2)
+            ukupniz = otporz12 + otporz3 + otporz4
+
+        alert("Ukupni otpor strujnog kruga je " + ukupniz + "ohma")
+}
+function zadatak9(){
+    let energijaq = Number(prompt("Kolika je energija prvog kondezatora A1"))
+    let kapacitet2q = Number(prompt("unesite kapacitet C2"))
+    let nabojq = Number(prompt("Unesite naboj spoja Q"))
+
+            
+
+}
