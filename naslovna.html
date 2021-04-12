@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="Main.css" media="screen" />
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 
      <!-- Compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -19,11 +19,14 @@
    
 </head>
 <body>
+
+  <!--NAVIGACIJA-->
     <nav>
-        <div class="cyan accent-4 nav-wrapper"> 
-          <a href="#" class="brand-logo right black-text">Elektro</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="naslovna.html" class="black-text">HOME</a></li> 
+        <div class="cyan accent-4 nav-wrapper "> 
+          <a href="naslovna.html" id="logo" class=" right brand-logo">
+            <img  src="slike/LOGO.png">
+          </a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down"> 
             <li><a href="ROhmsko.html" class="black-text">OTPORNICI</a></li>
             <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
             <li><a href="XKapacitivno.html" class="black-text">KONDENZATORI</a></li>
@@ -32,6 +35,43 @@
           </ul>
         </div>
       </nav>
+  <!--NAVIGACIJA-->
+
+
+  <!---->
+  <div>
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    <h1><em><b>Osnove elektrotehnike</b></em></h1>
    
@@ -110,7 +150,10 @@
             <li>
               <div class="collapsible-header"><i class="material-icons">content_paste</i>Primjer 1</div>
               <div class="collapsible-body"><span>
-                <b>Potencijal točke A je φ<sub>A</sub>= 5 V, a potencijal točke B je φ<sub>B</sub>= 30 V. Koliki je napon U<sub>AB</sub>, a koliki napon U<sub>BA</sub> ?</b>
+                <b>
+                  Potencijal točke A je φ<sub>A</sub>= 5 V, a potencijal točke B je φ<sub>B</sub>= 30 V. 
+                  Koliki je napon U<sub>AB</sub>, a koliki napon U<sub>BA</sub> ?
+                </b>
 
                 $$ U_{AB} = φ_A - φ_B = 5 V - 30 V = -25 V$$
                 $$ U_{BA} = - U_{AB} = 25 V$$
@@ -190,27 +233,107 @@
         </ul>
     </p>
 
+    <h3>Električna snaga</h3>
+    <p>
+        <em>Snaga</em> općenito označava sposobnost izvršenja 
+        nekog rada u određenom vremenu. Snaga se izražava kao 
+        <em>promjena energije (rad) <b>W</b> u jedinici vremena</em> 
+        i označava slovom <em>P</em>. 
+
+        $$ P ={ W \over t } $$
+
+        Uvrstimo li tu izraz za el. energiju (rad) \( W = U \cdot I \cdot t \)  
+        dobivamo \( P = {W \over t} = {{U \cdot I \cdot t} \over t} = U \cdot I \) 
+
+        <div class="card-panel cyan accent-4">
+          tj. <b>snaga na nekom elementu el. kruga jednaka 
+          je umnošku njegova napona i jakosti struje</b>. 
+        </div>
+
+        Jedinica za snagu je <em>voltamper</em> (VA) ili <b>vat</b> (<b>W</b>)
+
+        $$ P = U \cdot I \qquad [P]= VA = W $$
+
+        <b>Snaga na otporu</b> protjecanom strujom može se izraziti 
+        pomoću veličine otpora i struje, ili pomoću veličine otpora 
+        i napona na otporu. 
+        <br>
+        <br>
+        Prema Ohmovom zakonu \( I={U / R} \) što za snagu daje: 
+
+        $$ {P = U \cdot I} \quad {I = {U \over R}} \quad {P = {U \cdot {U \over R}}} \qquad {P = {U^2 \over R}} $$
+
+        Uz stalni otpor snaga raste s kvadratom napona, 
+        a uz stalni napon obrnuto je razmjerna otporu. 
+        <br>
+        <br>
+        Zamjena pak U s \(I \cdot R \) u jednadžbi za snagu daje:
+
+        $$ {P = U \cdot I} \quad {U = I \cdot R} \quad {P = I \cdot R \cdot I} \qquad {P = I^2 \cdot R} $$
+
+        Uz stalni otpor snaga je razmjerna kvadratu struje, 
+        a uz stalnu struju razmjerba je otporu.
+    </p>
+</div>
 
 
-    <footer class="page-footer cyan accent-4">
-        <div class="container">
+
+      <footer class="page-footer font-small pt-4">
+        <div class="container-fluid text-center text-md-center">
           <div class="row">
-            <div class="col l6 s12">
-              <h5 class="grey-text text-darken-3">Osnove elektrotehnike</h5>
-              <p class="grey-text text-darken-3">Osnovni podatci u osnovama elektrotehnike.</p>
+            <div class="col-md-6 mt-md-0 mt-3">
+              <h5 class="text-uppercase" id="onama">About us</h5>
+              <p id="onamap">Cilj ove edukativne stranice jest upoznavanje s osnovama u elektrotehnici </p>
+              <h5 class="text-uppercase" id="creator"></h5>
+              <br>
+              <p>
+                </p><div id="livo">
+                  <p id="creatorp"></p>
+                </div>
+              <br>
             </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="grey-text text-darken-3">Poveznice</h5>
-              <ul>
-                <li><a class="grey-text text-darken-3" href="#!">HOME</a></li>
-                <li><a class="grey-text text-darken-3" href="#!">Električni Naboj</a></li>
-                <li><a class="grey-text text-darken-3" href="#!">Električni Napon i Struja</a></li>
-                <li><a class="grey-text text-darken-3" href="#!">Električna Snaga</a></li>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase" id="projekt">project</h5>
+              <p id="projketp">This website was make for the EDIT Code School ICT project</p>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="https://www.ictzupanija.hr/" target="blank"><img src="Slike/footer/ict.png" height="50px"></a>
+                </li>
+                <li>
+                  <a href="https://www.ictzupanija.hr/edit" target="blank"><img src="Slike/footer/edit.jpg" height="80px"></a>
+                </li>
+                <li>
+                  <a href="http://prirodoslovna.trema.hr/" target="blank"><img src="Slike/footer/logo Prirodoslovna Škola_1.png" height="60px" width="130px"></a>
+                </li>
+                <br>
               </ul>
+            </div>
+            <div class="col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase" id="socmed">Follow us on Social media</h5>
+              <ul>
+                <li>
+                  <a href="https://www.instagram.com/explore/locations/217365104/split-croatia/?hl=hr" target="blank">
+                    <img class="footerimg" src="Slike/footer/instagram.png">
+                  </a>
+                  <a href="https://hr-hr.facebook.com/SplitnaFejsu/ " target="blank">
+                    <img class="footerimg" src="Slike/footer/facebook.png">
+                  </a>
+                </li>
+                </ul>
+                <h5 id="kontakt">CONTACT:</h5>
+                <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">+385-915-552-415</a></p>
+                <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">+385-925-553-681</a></p>
+                <h5 id="lokacija">LOCATION:</h5>
+                <p><a href="#">Ul. Matice hrvatske 11, 21000, Split</a></p>
             </div>
           </div>
         </div>
-      </footer>
+        </footer>
+
+
+
+        
 
         <script src="naslovna.js"></script>
 </body>

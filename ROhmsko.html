@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="Main.css" media="screen" />
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 
      <!-- Compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -154,7 +154,8 @@
 
           $$ [R]={V \over A}=Ω $$
 
-          Umjesto otpora u Ohmov zakon može se uvesti i njegova recipročna vrijednost tj. <em>vodljivost</em> G (G=1/R), pa se dobiju sljedeći izrazi:
+          Umjesto otpora u Ohmov zakon može se uvesti i njegova recipročna vrijednost 
+          tj. <em>vodljivost</em> G (G=1/R), pa se dobiju sljedeći izrazi:
 
           $$ {I = G \cdot U} \qquad {U = {I \over G}} \qquad {G = {I \over U}} $$
 
@@ -173,13 +174,15 @@
 
           <div class="card-panel cyan accent-4"><b>Elementi su spojeni serijski ako kroz njih teče ista struja.</b></div>
 
-          U krugu na slici na izvor napona <em>U</em> serijski su spojeni otpori <em>R<sub>1</sub></em>, <em>R<sub>2</sub></em> i <em>R<sub>3</sub></em>.
+          U krugu na slici na izvor napona <em>U</em> serijski su spojeni otpori 
+          <em>R<sub>1</sub></em>, <em>R<sub>2</sub></em> i <em>R<sub>3</sub></em>.
           <br> 
           Na njima su naponi:
 
           $$ {U_1=I \cdot R_1} \qquad {U_2=I \cdot R_2} \qquad {U_3=I \cdot R_3}$$
 
-          Označimo li s <em>R<sub>uk</sub></em> ukupni otpor serijskog spoja otpora <em>R<sub>1</sub></em>, <em>R<sub>2</sub></em> i <em>R<sub>3</sub></em>
+          Označimo li s <em>R<sub>uk</sub></em> ukupni otpor serijskog spoja otpora 
+          <em>R<sub>1</sub></em>, <em>R<sub>2</sub></em> i <em>R<sub>3</sub></em>
           (slika), napon izvora možemo izraziti kao 
           
           $$ U = I \cdot R_{uk} $$
@@ -192,7 +195,8 @@
 
           $$ I \cdot R_{uk} = I \cdot R_1 + I \cdot R_2 + I \cdot R_3 = I \cdot (R_1 + R_2 + R_3) $$
 
-          i konačno, dijeljenjem cijele jednadžbe s <em>I</em> dobiva se izraz za ukupni otpor serijskog spoja
+          i konačno, dijeljenjem cijele jednadžbe s <em>I</em> 
+          dobiva se izraz za ukupni otpor serijskog spoja
 
           $$ R_{uk} = R_1 + R_2 + R_3 $$
 
@@ -227,7 +231,8 @@
 
           <div class="card-panel cyan accent-4"><b>ukupna vodljivost paralelnog spoja otpora jednaka je zbroju vodljivosti paralelnih grana</b></div>
 
-          Općenito za ukupni otpor R<sub>uk</sub> paralelnog spoja <em>n</em> otpora R<sub>1</sub>, R<sub>2</sub> do R<sub>n</sub> vrijedi sljedeća jednadžba
+          Općenito za ukupni otpor R<sub>uk</sub> paralelnog spoja <em>n</em> otpora 
+          R<sub>1</sub>, R<sub>2</sub> do R<sub>n</sub> vrijedi sljedeća jednadžba
 
           $$ {1 \over R_{uk}} = {1 \over R_1} + {1 \over R_2} + ... + {1 \over R_n} $$
 
@@ -257,11 +262,53 @@
           (serijskih i paralelnih) spojeva opisanih u predhodnim poglavljima. 
           <br>
           <br>
-          
+          Već smo vidjeli kako se određuje ukupni otpor serijskog ili paralelnog 
+          spoja otpora. Ukupni otpor predstavlja omjer ukupnog napona i ukupne 
+          struje spoja, i njime se prema van može nadomjestiti serijski ili 
+          paralelni spoj otpora.
+          <br>
+          <br>
+          Općenito, <b>bilo kako složeni spoj otpora između dviju točaka el. kruga
+          može se nadomjestiti jednim otporom</b>. Taj otpor, koji je jednak omjeru 
+          napona i struje između prmatranih točaka kruga, nazivamo <em>nadomjesni</em> 
+          (ili ekvivalentni) <em>otpor</em>.
+          <br>
+          <br>
+          Na primjeru složenog spoja otpora sa slike pokazat ćemo postupak određivanja 
+          nadomjesnog otpora. Na slici , otpori R<sub>1</sub> i R<sub>2</sub> spojeni 
+          su serijski, a njima paralelno spojen je otpor R<sub>3</sub>. 
+          <br>
+          <br>
+          Prvi korak jest odrediti otpor serijskog spoja R<sub>1</sub> i R<sub>2</sub> 
+          (označimo ga kao R<sub>1-2</sub>):
 
+          $$ R_{1-2}=R_1 + R_2 $$
 
+          Spoj sa slike možemo pojednostavljeno prikazati kao paralelni spoj otpora 
+          R<sub>1-2</sub> i otpora R<sub>3</sub> (slika). Sljedeći korak (i završni) 
+          jest odrediti otpor paralelnog spoja (označimo ga s R<sub>1-2-3</sub>): 
+
+          $$ R_{1-2-3} = {{ R_{1-2} \cdot R_3 } \over { R_{1-2} + R_3 }} = R_{nad} $$
+
+          a to je i nadomjesni otpor cijelog spoja (slika) 
+
+          <div class="card-panel cyan accent-4">
+              Određivanje nadomjesnog otpora svodi se na postupno 
+              <em>pojednostavnjivanje</em> složenog spoja, tako 
+              da se uzastopnim koracima određuju otpori pojedinih 
+              serijskih i paralelnih kombinacija.
+          </div>
+
+          Poznavajući napon na složenom spoju otpora, pomoću nadomjesnog otpora 
+          možemo odrediti ukupnu struju spoja. Potom je lako (pomoću Kirchhoffovih zakona) 
+          odrediti raspodjelu struja i napona na pojedninm otporima složenog spoja. 
 
       </p>
+
+
+
+
+      
 
 
 
