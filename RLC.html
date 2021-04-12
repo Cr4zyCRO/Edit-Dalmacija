@@ -32,8 +32,266 @@
     </div>
   </nav>
 
-<h1>RLC</h1>
-<p>RLC krug</p>
+<h1>Jednostavni RLC-spojevi</h1>
+
+<!--SERIJSKI RL -->
+<h2>Serijski RL-spoj</h2>
+<p>
+  Na slici serijski spoj otpora i induktiviteta (s oznakama 
+  efektivnih vrijednosti struje i napona). Kod serijskog 
+  spoja otpora struja je zajednička, a ukupni napon je 
+  zbroj napona na otporima. 
+  <br>
+  <br>
+  Kod serijskog spoja raznih vrsta otpora (ovdje su to radni 
+  otpor R i induktivni otpor X<sub>L</sub>), naponi su međusobno 
+  pomaknuti u fazi, pa se ne može jednostavno zbrojiti njihove 
+  efektivne vrijednosti, nego treba uzeti u obzir i njihov fazni 
+  pomak. U tu svrhu se crta vektorski prikaz napona (<em>vektorski 
+  dijagram</em>), i naponi se zbrajaju vektorski.
+  <br>
+  <br>
+  Vektorski dijagram započinjemo crtati sa zajedničkom veličinom, 
+  a to je u serijskom spoju struja. Vektor struje <em>I</em> uzima 
+  se s početnim kutem 0, pa se prema njemu postavljaju vektori napona 
+  na induktivitetu U<sub>L</sub> i napon na otporu U<sub>R</sub> (slika).
+  <br>
+  <br>
+  Napon na otporu U<sub>R</sub> u fazi je sa strujom <em>I</em>, dok 
+  napon na induktivitetu U<sub>L</sub> prethodi struji za 90°. 
+  <br>
+  <br>
+  <em>
+    Vektor napona izvora U jednak je vektorskom zbroju napona 
+    na otporu U<sub>R</sub> i induktivitetu U<sub>L</sub>.
+  </em>
+  <br>
+  <br>
+  Ova tri napona čine pravokutni trokut pa vrijedi:
+
+  $$ U^2= U^2_R + U^2_L $$
+
+  Kut napona U prema struji je pozitivan, tj. ukupni 
+  napon prethodi struji za neki kut \( \; φ \; \; (0° \lt φ \lt 90°) \). 
+  <br>
+  <br>
+  Dijeljenjem svake stranice trokuta napona s <em>I</em>, dobiva se 
+  sličan pravokutni trokut s katetama jednakim radnom otporu R i 
+  induktivnom otporu X<sub>L</sub> (slika). On se naziva <em>tokut otpora</em>. 
+  <br>
+  <br>
+  Hipotenuza ovog trokuta jednaka je omjeru ukupnog napona <em>U</em> 
+  i struje <em>I</em> spoja. Taj omjer ne predstavlja nikakav stvarni 
+  otpor, pa se naziva <em>prividni otpor</em> (ili impendancija) i 
+  označava sa <em>Z</em>. 
+
+  $$ Z^2= R^2 + X^2_L $$
+
+  Kut φ (između R i Z) naziva se i <em>kut impendancije</em>.
+  <br>
+  <br>
+  Pomnože li se stranice trokuta napona sa strujom <em>I</em>, 
+  dobiva se sličan pravokutni trokut u kojemu se katete jednake 
+  radnoj snazi P i jalovoj snazi Q<sub>L</sub>. Taj trokut naziva 
+  se <em>trokut snage</em> (slika). 
+  <br>
+  <br>
+  Hipotenuza trokuta snage jednaka je umnošku ukupnog napona U i 
+  struje <em>I</em> spoja. Umnožak \(UI\) ne predstavlja snagu ni 
+  na jednom elementu kruga, pa se naziva <em>prividna snaga</em> i 
+  označava se sa <em>S</em>. Prividna snaga izražava se u 
+  <em>voltamperima</em> (VA).
+  <br>
+  <br>
+  Trokut daje odnos prividne, radne i jalove snage
+
+  $$ S^2= P^2 + Q^2_L $$
+
+  Omjer radne snage P i prividne snage S naziva se <em>faktor snage</em>
+  spoja (još se označava i kao \( \cos φ \))
+</p>
+<!--SERIJSKI RL KRAJ -->
+
+<!--SERIJSKI RC -->
+<h2>Serijski RC-spoj</h2>
+<p>
+  Slika prikazuje serijski spoj otpora R i kapaciteta C, 
+  kroz koje izvor napona <em>U</em> tjera struju <em>I</em>. 
+  <br>
+  <br>
+  U <b>vektorskom dijagramu</b> (slika) vektor struje <em>I</em> 
+  uzimamo referentnim (s početnim kutem nula). Napon na otporu 
+  U<sub>R</sub> u fazi je sa strujom, a napon na kapacitetu 
+  U<sub>C</sub> zaostaje u fazi iza struje za 90°. 
+  <br>
+  <br>
+  Vektorski zbroj napona na otporu U<sub>R</sub> i napona na 
+  kapacitetu U<sub>C</sub> daje napon izvora U. Ovi naponi 
+  čine pravokutni trokut iz kojeg proizlazi da je
+
+  $$ U^2= U^2_R + U^2_L $$
+
+  Ovdje je kut napona U prema struji negativan, tj. napon U 
+  zaostaje iza struje za kut \( \; φ \; \; (-90° \lt φ \lt 0°) \).
+  <br>
+  <br>
+  U <b>trokut otpora</b>, dobivenom iz trokuta napona (slika), 
+  zbog negativnog kuta φ kapacitivni otpor X<sub>C</sub> je 
+  ispod radnog otpora R (nasuprot induktivnog otpora 
+  X<sub>L</sub> u trokutu otpora RL-kruga).
+  <br>
+  <br>
+  Prividni, radi i reaktivni (kapacitivni) otpor
+  povezani su i ovdje Pitagorinim poučkom
+
+  $$ Z^2= R^2 + X^2_C $$
+
+  U <b>trokutu snage</b> (slika), zbog negativnog kuta φ 
+  kapacitivna jalova snaga Q<sub>C</sub> je ispod radne 
+  snage P, suprotno od induktivne snage Q<sub>L</sub> 
+  u trokutu snage RL-kruga. 
+  <br>
+  <br>
+  Prividna, radna i jalova (kapacitivna) snaga 
+  povezane su također putem Pitagorina poučka
+
+  $$ S^2= P^2 + Q^2_C $$
+
+  Faktor snage i ovdje se, kao i u bilo kojem spoju, 
+  računa se kao omjer radne i prividne snage \( (P/S) \).
+  
+</p>
+<!--SERIJSKI RC KRAJ-->
+
+
+<!--SERIJSKI RLC -->
+<h2>Serijski RLC-spoj</h2>
+<p>
+  U serijskom RLC-krugu (slika) uz radni otpor R su 
+  induktivni otpor X<sub>L</sub> i kapacitivni otpor X<sub>C</sub>. 
+  <br>
+  <br>
+  U vektorskom dijagramu (slika), vektor napon na otporu 
+  U<sub>R</sub> u fazi je s vektorom struje <em>I</em>, 
+  koju uzimamo kao referentnu (s početnim kutem nula). 
+  <br>
+  <br>
+  Napon na induktivitetu U<sub>L</sub> prethodi struji za 90°, 
+  a napon na kapacitetu U<sub>C</sub> istodobno zaostaje iza 
+  struje za 90°, pa je kut između ovih napona 180°. 
+  
+  <div class="card-panel cyan accent-4">
+    <b>
+      U serijskom spoju, vektori napona na induktivitetu 
+      i kapacitetu suprotnog su smjera.
+    </b>
+  </div>
+
+  To znači da su ovi naponi u svakom trenutku suprotnih 
+  polariteta (kažemo da su naponi u <em>protufazi</em>).
+  <br>
+  <br>
+  Napon na serijskom spoju induktiviteta i kapaciteta iznosom
+  je jednak razlici napona U<sub>L</sub> i U<sub>C</sub>, a 
+  ima smjer većeg od ovih napona. Kad je \(U_L = U_C\), tad 
+  je napon na LC-spoju jednak nuli i sav napon izvora je na 
+  otporu R. U tom slučaju kažemo da je u serijskom RLC-krugu 
+  nastupila <em><b>rezonancija</b></em>. 
+  <br>
+  <br>
+  Vektor ukupnog napona U jest vektorski zbroj napona 
+  na otporu, induktivitetu i kapacitetu. 
+  <br>
+  <br>
+  U slučaju prikazanom na slici napon U<sub>L</sub> veći je 
+  od napona U<sub>C</sub>, pa ukupni napon U prethodi struji 
+  za kut φ. U slučaju kad je U<sub>C</sub> veći od U<sub>L</sub> 
+  tad ukupni napon zaostaje u fazi iza struje \( (φ \lt 0°) \). 
+  U rezonanciji napon U je u fazi sa strujom \( (φ = 0°) \). 
+  Iz trokuta napona na slici proizlazi jednadžba 
+
+  $$ U^2= U^2_R + (U_L - U_C)^2 $$
+
+  Dijeljenjem ove jednadžbe s <em>I</em> dobiva se izraz
+  
+  $$ (U / I)^2 = (U_R / I)^2 + (U_L / I - U_C / I)^2 $$
+
+  tj.
+
+  $$ Z^2= R^2 + (X_L - X_C)^2 = R^2 + X^2 $$
+
+  Ova jednadžba opisuje <b>trokut otpora</b> (slika) gdje je 
+  ukupni reaktivni otpor X jednak razlici induktivnog i 
+  kapacitivnog otpora \( (X = X_L - X_C) \). 
+  <br>
+  <br>
+  U rezonanciji je ukupni reaktivni otpor X jednak nuli 
+  pa je prividni otpor jednak radnom \( (Z=R) \). 
+  <br>
+  <br>
+  U <b>trokutu snage</b> (slika) ukupna jalova snaga Q jednaka 
+  je razlici snage na induktivitetu i snage na kapacitetu 
+  \( (Q = Q_L - Q_C) \). Zbog suprotnih polariteta napona, 
+  induktivna i kapacitivna snaga suprotnih su predznaka. 
+  To znači da induktivitet daje energiju u trenutku kad ju 
+  kapacitet prima i obratno.
+  <br>
+  <br>
+  U rezonanciji ukupna jalova snaga je nula \( (Q=0) \), 
+  tj. kapacitivna ili induktivna snaga se poništavaju.
+
+</p>
+<!--SERIJSKI RLC KRAJ-->
+
+<!--PARALELNI RL-->
+<h2>Paralelni RL-spoj</h2>
+<p>
+  Kod paralelnog spoja otpora R i induktiviteta L (slika), 
+  napon je isti na oba elementa, a ukupna struja je zbroj 
+  struja pojedinih elemenata. Pri zbrajanju treba uzeti u 
+  obzir fazni pomak između struja. U tu svrhu se koristi 
+  njihov vektorski prikaz.
+  <br>
+  <br>
+  U vektorskom prikazu (slika) vektor napona U, (zajednički 
+  za oba elementa), uzimamo kao referentan i crtamo s kutem 
+  jednakim nuli. 
+  <br>
+  <br>
+  Struja kroz otpor <em>\(I_R\)</em> u fazi je s naponom, a 
+  struja kroz induktivitet <em>\(I_L\)</em> zaostaje iza 
+  napona za 90°. 
+  <br>
+  <br>
+  Vektor struje <em>I</em> je zbroj vektora struja <em>\(I_R\)</em> i <em>\(I_L\)</em>. 
+  Ova tri vektora čine pravokutni trokut gdje je
+
+  $$ I^2= I^2_R + I^2_L $$
+
+  Dijeljenjem stranica trokuta struja s naponom U da je sličan 
+  pravokutni trokut (slika), čije su katete jednake recipročnim 
+  vrijednostima radnog i induktivnog otpora, tj. 
+  <em>vodljivostima</em> elemenata.
+  <br>
+  <br>
+  Označavamo ih s \( G = I_R / U = 1 / R \) (radna vodljivost) i 
+  \( B_L = I_L / U = 1 / X_L = 1 / ωL \) (induktivna vodljivost), 
+  a taj trokut nazivamo trokut <em>vodljivosti</em>. 
+  <br>
+  <br>
+  Hipotenuza ovog trokuta, jednaka je omjeru ukupne struje i napona 
+  \((I/U)\), ne predstavlja vdljivost nijednog elementa, pa se 
+  naziva <em>prividna vodljivost</em> (ili <em>admitancija</em>) 
+  i označava se s Y. Pritom vrijedi 
+  
+  $$ Y^2= G^2 + B^2_L $$
+
+
+</p>
+<!--PARALENI RL KRAJ-->
+
+
+
 <script src="RLC.js"></script>
 </body>
 </html>

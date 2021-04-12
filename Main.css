@@ -1,18 +1,13 @@
 body{
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 14pt;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 16pt;
+  
 }
 
-.definicija{
-  padding: 3mm;
-  background-color: cyan;  
-}
-
-img{
-    border-radius: 8px;
-    max-width: 60%;
-    max-height: 50%;
+#logo{
+  vertical-align: middle;
+  margin-right: 25px;
 }
 
 
