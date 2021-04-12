@@ -263,8 +263,8 @@
   napona za 90°. 
   <br>
   <br>
-  Vektor struje <em>I</em> je zbroj vektora struja <em>\(I_R\)</em> i <em>\(I_L\)</em>. 
-  Ova tri vektora čine pravokutni trokut gdje je
+  Vektor struje <em>I</em> je zbroj vektora struja <em>\(I_R\)</em> 
+  i <em>\(I_L\)</em>. Ova tri vektora čine pravokutni trokut gdje je
 
   $$ I^2= I^2_R + I^2_L $$
 
@@ -321,6 +321,152 @@
 </p>
 <!--PARALENI RL KRAJ-->
 
+<!--PARALELNI RC-->
+<h2>Paralelni RC-spoj</h2>
+<p>
+  Kod paralelnog spoja otpora R i kapaciteta C (slika) napon U isti 
+  je na oba elementa. Slika prikazuje odnos vektora napona i struje.
+  <br>
+  <br>
+  Struja kroz otpor \(I_R\) u fazi je s naponom U, a struja
+  kroz kapacitet \(I_C\) prethodi naponu za 90°. 
+  <br>
+  <br>
+  Vektor struje I je zbroj vektora struje \(I_R i I_C\).
+  Ova tri vektora čine pravokutni trokut gdje je
+  
+  $$ I^2=I^2_R + I^2_C $$
+
+  Dijeljenjem stranica trokuta struja s naponom U 
+  dobiva se sličan trokut nazvan trokut vodljivosti.
+  <br>
+  <br>
+  Katete ovog trokuta (slika) jednake su radnoj vodljivosti G 
+  \( (G=I_R/U=1/R) \) i kapacitivnoj vodljivosti B<sub>C</sub> 
+  \( (B_C=I_L/U=1/X_C=ωC) \), a hipotenuza je jednaka prividnoj 
+  vodljivosti spoja <em>Y</em>, gdje je 
+  
+  $$ Y^2=G^2 + B^2_C $$
+
+  Ukupna struja I ovdje prethodi naponu U, pa je kut admitancije 
+  pozitivan \( (0° \lt φ_Y \lt 90°) \). To znači da je kut 
+  impendancije φ (tj. kut napona U prema struji I) negativan, 
+  što znači da napon zaostaje za strujom (to je opće svojstvo kapacitivnog
+  spoja). Snaga paralelnog RC-spja računa se na slijedeći način:
+
+  <ul>
+    <li>
+      Radna snaga      \( P = I^2_R \cdot R = U^2 / R = U^2 \cdot G \)
+    </li>
+    <li>
+      Jalova snaga     \( Q_C = I^2_C \cdot X_C = U^2 / X_C = U^2 \cdot B_C \)
+    </li>
+    <li>
+      Prividna snaga   \( S = I^2 \cdot Z = U^2 / Z = U^2 \cdot Y \)
+    </li>
+  </ul>
+
+  Ova tri tipa snage čine trokut snage paralelnog 
+  RC-spoja prikazan na slici.
+  <br>
+  <br>
+  Iz trokuta sange proizlazi i faktor snage. On je, neovisno 
+  o spoju elemenata, uvijek jedank omjeru radne i prividne 
+  snage \( (P/S) \). 
+  <br>
+  <br>
+  kad se zadaje faktor snage nekog trošila ili spoja, 
+  navodi se i njegov tip: induktivno ili kapacitivno. 
+  <br>
+  <br>
+  
+</p>
+<!--PARALELNI RC KRAJ-->
+
+<!--PARALELNI RLC-->
+<h2>Paralelni RLC-spoj</h2>
+<p>
+  U paralelnom RLC-krugu (slika) uz radni otpor R 
+  paralelno su spojeni i oba tipa reaktivnih otpora, 
+  induktivni otpor \(X_L\) i kapacitivi otpor \(X_C\). 
+  <br>
+  <br>
+  U vektorskom dijagramu (slika), vektori struje kroz 
+  otpor \(I_R\) u fazi je s vektorom napona U, koji 
+  uzimamo kao referentan (s početnim kutem nula). 
+  <br>
+  <br>
+  Struja kroz induktivitet \(I_L\) prethodi naponu za 90°, 
+  dok struja kroz kapacitet \(I_C\) zaostaje iza napona za 
+  90°, pa je kut između ovih struja 180°. 
+
+  <div class="card-panel cyan accent-4">
+    <b>
+      U paralelnom spoju, vektori struja kroz 
+      induktivitet i kapacitet suprotnog su smjera.
+    </b>
+  </div>
+
+  To znači da su ove struje u svakom trenutku suprotnih 
+  smjerova (kažemo da su u <em>protufazi</em>).
+  <br>
+  <br>
+  Struja paralelnog spoja induktiviteta i kapaciteta iznosom 
+  je jednaka razlici struja \(I_C \; i \; I_L\), a ima smjer veće 
+  od tih struja. Kad je \(I_C=I_L\), tad je ukupna struja 
+  LC-spoja jednaka nuli i sva struja izvora teče kroz otpor R. 
+  Tada kažemo da je u paralelnom RLC-krugu nastupila <b>rezonancija</b>. 
+  <br>
+  <br>
+  Vektor ukupne struje I jednak je vektorskom zbroju struja 
+  kroz otpor, induktivitet i kapacitet.
+  <br>
+  <br>
+  U slučaju prikazanom na slici struja \(I_C\) veća je od 
+  struja \(I_L\), pa ukupna struja I prethodi naponu U za 
+  kut \(φ_Y\). U slučaju kad je \(I_L\) veća od \(I_C\) 
+  tad ukupna struja zaostaje u fazi iza napona \((φ_Y \lt 0)\).
+  <br>
+  <br>
+  Iznosi struja međusobno su povezani jednadžbom 
+
+  $$ I^2= I^2_R + (I_C - I_L)^2 $$
+
+  Dijeljenjem ove jednadžbe s U dobiva se izraz 
+
+  $$ (I / U)^2 = (I_R / U)^2 + (I_C / U - I_L / U)^2 $$
+
+  tj. 
+
+  $$ Y^2= G^2 + (B_C - B_L)^2 $$ 
+
+  Ovaj izraz opisuje trokut vodljivosti (slika). Ukupna 
+  reaktivna vodljivost B jednaka je razlici kapacitivne 
+  i induktivne vodljivosti \( (B=B_C-B_L) \).
+  <br>
+  <br>
+  Pri rezonanciji je ukupna reaktivna vodljivost \(B=0\) 
+  (otpor paralelnog spoja L i C je beskonačan), pa je 
+  prividna vodljivost jednaka radnoj \((Y=G)\). 
+  <br>
+  <br>
+  Zbog suprotnih smjerova struja \( I_L \; i \; I_C \), 
+  induktivna i kapacitivna snaga i tu su suprotnih predznaka.
+  <br>
+  <br>
+  To znači da induktivitet daje energiju u trenutku kad 
+  je kapacitet prima i obratno. 
+  <br>
+  <br>
+  U trokutu snage (slika) ukupna jalova snaga Q 
+  jednaka je stoga razlici snage na induktivitetu 
+  i snage na kapacitetu \( (Q=Q_L-Q_C) \). 
+  <br>
+  <br>
+  U rezonanciji ukupna jalova snaga \((Q=0)\), tj. snage 
+  na kapacitetu i induktivitetu se <em>kompenziraju</em>. 
+  
+</p>
 
 
 <script src="RLC.js"></script>
