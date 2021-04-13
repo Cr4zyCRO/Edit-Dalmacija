@@ -25,8 +25,8 @@
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="naslovna.html" class="black-text">HOME</a></li> 
         <li><a href="ROhmsko.html" class="black-text">OTPORNICI</a></li>
-        <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
         <li><a href="XKapacitivno.html" class="black-text">KONDENZATORI</a></li>
+        <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
         <li><a href="RLC.html" class="black-text">RLC</a></li>
         <li><a href="zadatci.html" class="black-text">ZADATCI</a></li>
       </ul>
@@ -34,6 +34,72 @@
   </nav>
 
     <h1>Pojam električnog induktiviteta </h1>
+    <h2>Svitak u krugu istosmjerne struje</h2>
+    <p>
+      Svitak (ili zavojnica) sastavni je element fizičkih 
+      strjnih krugova. Zbog sposobnosti da svojim zavojima 
+      višesruko obuhvati magnetski tok svitak ima izražen 
+      induktivitet. Obuhvaćajući magnetski tok svitak 
+      pohranjuje energiju magnetskog polja, što ga čini 
+      spremnikom energije u el. krugu. 
+      <br>
+      <br>
+      Kao i otpornik i kondenzator, tako se i svitak u 
+      krugu idealizirano prikazuje svojim glavnim svojstvima, 
+      a to je induktivitet L. Realni svitak međutim ima i 
+      neki otpor i kapacitet koje se ponekad ne može zanemariti, 
+      pa ih se u krugu uključuje u obliku nadomjesnog spoja. 
+      <br>
+      <br>
+      Struja i napon na induktivitetu L povezani su jednadžbom
+
+      $$ u_L = L {{\Delta i} \over {\Delta t}} $$
+
+      gdje je: 
+      <ul>
+        <li>\(u_L \; \) napon na induktivitetu </li>
+        <li>\(L \; \)  induktivitet</li>
+        <li>\(i \; \) struja kroz induktivitet</li>
+      </ul>
+      Za ovu jednadžbu referentni smjer struje i polaritet 
+      napona označeni su na slici. Referentni \("+"\) (plus) 
+      napona je na mjestu ulaska struje.
+      <br>
+      <br>
+      Kad struja raste, tad je promjena struje u vremenu 
+      \((\Delta i / \Delta t)\) pozitivna, pa je i napon 
+      \(u_L\) pozitivan što znači da mu je stvarni \("+"\) 
+      na referentnom mjestu (ulaska struje).
+      <br>
+      <br>
+      Kad struja pada, tad je promjena struje u vremenu 
+      \((\Delta i / \Delta t)\) negativna, pa je napon 
+      \(u_L\) negativan što znači da mu je stvarni \("+"\) 
+      nasuprot referentnom mjestu, tj. na mjestu izlaska struje.
+      <br>
+      <br>
+    </p>
+
+    <h2>Serijski spoj induktiviteta</h2>
+    <p>
+      Serijski spoj svitka prikazuje se serijskim spojem 
+      njihovih induktiviteta (slika). Oba induktiviteta 
+      \(L_1 \; i \; L_2\) imaju istu struju \(i\), što 
+      znači i istu promjenu struje \(\Delta i / \Delta t\), 
+      dok je ukupni napon \(u_{uk}\) jednak zbroju pojedinih 
+      napona \(u_{L1} \; i \; u_{L2}\) 
+
+      $$ u_{uk} = L_1\frac{\Delta i}{\Delta t} + L_2\frac{\Delta i}{\Delta t}= (L_1 + L_2)\frac{\Delta i}{\Delta t} = L_{uk}\frac{\Delta i}{\Delta t} $$
+
+      Iz ovoga proizlazi za serijski spoj induktiviteta:
+      <br> 
+      <b>
+        ukupni induktivitet serijskog spoja <em>n</em> induktiviteta 
+        jednak je zbroju pojedinih induktiviteta.
+      </b> 
+    </p>
+
+    <h2>Paralelni spoj induktiviteta</h2>
 
 
 
@@ -44,5 +110,9 @@
         <li><a href="induktivnimjesovito.html">Mješoviti spoj</a></li>
     </ul>
     <script src="naslovna.js"></script>
+
+
+
+
 </body>
 </html>
