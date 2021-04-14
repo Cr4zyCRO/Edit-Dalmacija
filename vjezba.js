@@ -102,3 +102,75 @@ function vjezba6(){
             alert("Krivo si odgovorio za I4")
         }
 }
+function vjezba7(){
+    let odgovor7a = Number(prompt("Koliko je iznosi tvoja struja I1"))
+    let odgovor7b = Number(prompt("Vrijednost je vrijednost struje I3"))
+    let odgovor7c = Number(prompt("I za kraj struja I4"))
+
+        if (odgovor7a == 1.5 ) {
+            alert("Dobor si izračunao struju I1")
+        } else {
+            alert("Tvoj odgovor za struju i1 nije točan")
+        }
+        if (odgovor7b == 2) {
+            alert("Točan odgovor za struju I3")
+        } else {
+            alert("Krivi odgovor struja I3 nije dobra")
+        }
+        if (odgovor7c == 1) {
+            alert("Izvrsno, struja I4 je točna")
+        } else {
+            alert("Nažalost si krivo odgovorio struja I4 nije dobra")
+        }
+}
+function vjezba8(){
+    let odgovor8a = Number(prompt("Koliko ti iznosi napon izvora"))
+    let odgovor8b = Number(prompt("Za struju I1 koji se rezultat dobio"))
+    let odgovor8c = Number(prompt("Tvoja vrijednost struje I3"))
+    let odgovor8d = Number(prompt("I tvoja vrijednsot struje I4"))
+
+        if (odgovor8a == 90 ) {
+            alert("Napon izvora U je dobro izračunat")
+        } else {
+            alert("Negdje si pogriješio napon izvora U ne iznosi toliko")
+        }
+        if (odgovor8b == 3) {
+            alert("Točan odgovor za struju I1")
+        } else {
+            alert("Krivo si odgovorio za struju I1")
+        }
+        if (odgovor8c == 2) {
+            alert("Dobro si izračunao struju I3")
+        } else {
+            alert("Nažalost struja I3 nije dobra")
+        }
+        if (odgovor8d == 4) {
+            alert("Struja I4 je dobro izračunata")
+        } else {
+            alert("Netočan odgovor struja I4 ne iznosi toliko")
+        }
+}
+function vjezba9(){
+    let odgovor9a = Number(prompt("Koliko iznosi struja I1"))
+    let odgovor9b = Number(prompt("A zatim sturja I4"))
+    let odgovor9c = Number(prompt("I na kraju struja I5"))
+
+        if (odgovor9a == 18) {
+            alert("Za početak struja I1 je dobro izračunata")
+        } else {
+            alert("Krivo si počeo struja I1 nije dobra ")
+        }
+        if (odgovor9b == 12 ) {
+            alert("Točan odgovor za struju I4")
+        } else {
+            alert("Nažalost kriv odgovor za struju I4")
+        }
+        if (odgovor9c == 4) {
+            alert("Struja I5 je točna")
+        } else {
+            alert("Negdje imaš grešku sturja I5 nije točna")
+        }
+}
+function vjezba10() {
+    
+}
