@@ -19,19 +19,36 @@
     <title>Kapacitivni otpor</title>
 </head>
 <body>
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="ROhmsko.html" class=" black-text">OTPORNICI</a></li>
+    <li><a href="XKapacitivno.html" class="black-text">KONDENZATORI</a></li>
+    <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
+    <li><a href="RLC.html" class="black-text">RLC</a></li>
+    <li><a href="zadatci.html" class="black-text">ZADATCI</a></li>
+  </ul>
+  
+  <div class="navbar-fixed">
     <nav>
-        <div class="cyan accent-4 nav-wrapper"> 
-          <a href="#" class="brand-logo right black-text">Elektro</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="naslovna.html" class="black-text">HOME</a></li> 
-            <li><a href="ROhmsko.html" class="black-text">OTPORNICI</a></li>
-            <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
-            <li><a href="XKapacitivno.html" class="black-text">KONDENZATORI</a></li>
-            <li><a href="RLC.html" class="black-text">RLC</a></li>
-            <li><a href="zadatci.html" class="black-text">ZADATCI</a></li>
-          </ul>
+        <div class="nav-wrapper light-blue lighten-3">
+            <a href="#" class="brand-logo center">KAYWA</a>                  
+              <ul class="left hide-on-med-and-down ">
+                <li><a href="naslovna.html" >HOME</a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                
+              </ul> 
+              <ul class="right hide-on-med-and-down ">
+                <li><a href="#" class="link">ABOUT US</a></li>
+                <li><a href="#" class="link">SOCIAL MEDIA</a></li>
+                <li><a href="#" class="link">CONTACT US</a></li>
+              </ul>            
         </div>
-      </nav>
+    </nav>
+  </div>
+
+<div class="Maintxt">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#81d4fa" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,192C384,203,480,181,576,149.3C672,117,768,75,864,101.3C960,128,1056,224,1152,256C1248,288,1344,256,1392,240L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+</svg> 
 
     <h1>KONDENZATORI</h1>
     <h2 id="VrhC">Pojam električnog kapaciteta</h2>
@@ -103,6 +120,20 @@
         i označava s X<sub>C</sub>.
         \[{U_m \over I_m} = {U \over I} = {1 \over ω \cdot C} = X_C\]
         
+    </p>
+
+    <h3>Kapacitivna jalova snaga</h3>
+    <p>
+      Umnožak struje i napona na kapacitetu daje sinusoidu 
+      trenutačne snage čija je srednja vrijednost, tj. 
+      radna snaga jednaka nuli (slika). 
+      <br>
+      <br>
+      Umnožak efektivnih vrijednosti struje i napona, tj. 
+      snaga na kapacitetu stoga se (za razliku od radne 
+      snage) naziva <em>jalova</em> snaga i označava s \(Q_C\).
+
+      $$ Q_C = U \cdot I = \frac{U^2}{X_C} = I^2 \cdot X_C $$
     </p>
 
 

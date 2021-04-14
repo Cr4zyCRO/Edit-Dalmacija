@@ -18,19 +18,36 @@
     <title>Ohmski otpor</title>
 </head>
 <body>
-    <nav>
-        <div class="cyan accent-4 nav-wrapper"> 
-          <a href="#" class="brand-logo right black-text">Elektro</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="naslovna.html" class="black-text">HOME</a></li> 
-            <li><a href="ROhmsko.html" class="black-text">OTPORNICI</a></li>
-            <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
-            <li><a href="XKapacitivno.html" class="black-text">KONDENZATORI</a></li>
-            <li><a href="RLC.html" class="black-text">RLC</a></li>
-            <li><a href="zadatci.html" class="black-text">ZADATCI</a></li>
-          </ul>
-        </div>
-      </nav>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="ROhmsko.html" class=" black-text">OTPORNICI</a></li>
+        <li><a href="XKapacitivno.html" class="black-text">KONDENZATORI</a></li>
+        <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
+        <li><a href="RLC.html" class="black-text">RLC</a></li>
+        <li><a href="zadatci.html" class="black-text">ZADATCI</a></li>
+      </ul>
+      
+      <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper light-blue lighten-3">
+                <a href="#" class="brand-logo center">KAYWA</a>                  
+                  <ul class="left hide-on-med-and-down ">
+                    <li><a href="naslovna.html" >HOME</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                    
+                  </ul> 
+                  <ul class="right hide-on-med-and-down ">
+                    <li><a href="#" class="link">ABOUT US</a></li>
+                    <li><a href="#" class="link">SOCIAL MEDIA</a></li>
+                    <li><a href="#" class="link">CONTACT US</a></li>
+                  </ul>            
+            </div>
+        </nav>
+      </div>
+
+   <div class="Maintxt">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#81d4fa" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,192C384,203,480,181,576,149.3C672,117,768,75,864,101.3C960,128,1056,224,1152,256C1248,288,1344,256,1392,240L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg> 
 
     <h1><em>Ohmski otpor</em></h1>
 
@@ -303,6 +320,68 @@
           možemo odrediti ukupnu struju spoja. Potom je lako (pomoću Kirchhoffovih zakona) 
           odrediti raspodjelu struja i napona na pojedninm otporima složenog spoja. 
 
+      </p>
+
+      <h2>Otpor u krugu izmjenične struje</h2>
+      <h3>Struja i napon na otporu</h3>
+      <p>
+          Na otporu su napon u_t i struja i_t povezani u svakom 
+          trenutku Ohmovim zakonom preko otpora R: 
+
+          $$ u(t) = R \cdot i(t) = R \cdot I_m \sin(\omega t) = U_m \sin(\omega t) $$
+
+          To znači da sinusoida napona na otporu ima nule i 
+          maksimume istodobno kad i sinusoida struje, tj. 
+          <b>između struje i napona nema faznog pomaka</b>. 
+          Kažemo da su na otporu napon i struja u <em>fazi</em>. 
+          <br>
+          <br>
+          Na slici su vektori i vremenski prikazi struje i 
+          napona na otporu. Omjer vršnih (i efektivnih) 
+          vrijednosti napona i struje jednak je otporu R 
+
+          $$ \frac{U_m}{I_m} = \frac{U}{I} = R $$
+      
+      </p>
+
+      <h3>Snaga na otporu</h3>
+      <p>
+          Snaga na nekom elementu električnog kruga, 
+          prisjetimo se, jednaka je umnošku napona i struje 
+
+          $$ p(t) = u(t) \cdot i(t) $$ 
+
+          Na slici prikazane su vremenske funkcije struje, 
+          napona i trenutačne snage na otporu p_t . 
+          Trenutačna snaga, kao umnožak sinusoida napona i struje, 
+          također je sinusoida, ali dvostruke frekvencije. 
+          <br>
+          <br>
+          Snaga na otporu vremenski se mijenja po sinusoidi 
+          koja je cijela pomaknuta u pozitivno područje. 
+          <br>
+          <br>
+          Pozitivni predznak snage znači da otpor stalno 
+          <em>prima</em> energiju. Ova snaga određuje energiju 
+          koja se nepovratno pretvara u toplinu (električni rad), 
+          pa se naziva <em>radna</em> (djelatna) snaga (oznaka P). 
+
+          <div class="card-panel cyan accent-4">
+              <b>
+                  Radna snaga P, tj. snaga na otporu R, 
+                  jednaka je srednjoj vrijednosti 
+                  trenutačne snage p_t. 
+              </b>
+          </div>
+
+          Srednja vrijednost snage (snaga na otporu) je sredina 
+          između najmanje (0) i najveće snage \((U_m I_m)\).
+
+          $$ P = \frac{U_m \cdot I_m}{2} = \frac{U_m}{\sqrt 2} \cdot \frac{I_m}{\sqrt 2} = U \cdot I = \frac{U^2}{R} = I^2 \cdot R $$ 
+          
+          
+
+          
       </p>
 
 

@@ -19,20 +19,44 @@
     <title>Induktivni otpor</title>
 </head>
 <body>
-  <nav>
-    <div class="cyan accent-4 nav-wrapper"> 
-      <a href="#" class="brand-logo right black-text">Elektro</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="naslovna.html" class="black-text">HOME</a></li> 
-        <li><a href="ROhmsko.html" class="black-text">OTPORNICI</a></li>
+
+  
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="ROhmsko.html" class=" black-text">OTPORNICI</a></li>
         <li><a href="XKapacitivno.html" class="black-text">KONDENZATORI</a></li>
         <li><a href="XInduktivno.html" class="black-text">ZAVOJNICE</a></li>
         <li><a href="RLC.html" class="black-text">RLC</a></li>
         <li><a href="zadatci.html" class="black-text">ZADATCI</a></li>
       </ul>
-    </div>
-  </nav>
+      
+      <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper light-blue lighten-3">
+                <a href="#" class="brand-logo center">KAYWA</a>                  
+                  <ul class="left hide-on-med-and-down ">
+                    <li><a href="naslovna.html" >HOME</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                    
+                  </ul> 
+                  <ul class="right hide-on-med-and-down ">
+                    <li><a href="#" class="link">ABOUT US</a></li>
+                    <li><a href="#" class="link">SOCIAL MEDIA</a></li>
+                    <li><a href="#" class="link">CONTACT US</a></li>
+                  </ul>            
+            </div>
+        </nav>
+      </div>
 
+   <div class="Maintxt">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#81d4fa" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,192C384,203,480,181,576,149.3C672,117,768,75,864,101.3C960,128,1056,224,1152,256C1248,288,1344,256,1392,240L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>         
+
+  <div class="container">
+
+    
+      
+  
     <h1>Pojam električnog induktiviteta </h1>
     <p>
       Induktivitet se može izraziti kao omjer iznosa 
@@ -75,16 +99,19 @@
 
       $$ L = \frac{N \phi}{I} $$
 
-      gdje je: 
-      <ul>
-        <li>L</li>
-        <li>\phi</li>
-        <li>I</li>
-        <li>N</li>
-        <li></li>
-      </ul>
-
-      <div class="card-panel cyan accent-4">
+      gdje je:
+      <div id="content"> 
+        <ul>
+          <li>\(L\)  - induktivitet</li>
+          <li>\(\phi\) - magnetski tok</li>
+          <li>\(I\) - jakost struje</li>
+          <li>\(N\) - broj zavoja 
+            (koliko je puta obuhvaćen tok \(\phi\))
+          </li>
+          
+        </ul>
+      </div>
+      <div class="card-panel light-blue lighten-3">
         <em><b>
             Induktivitet je mjera sposobnosti tijela da 
             strujom obuhvatiti svoj magnetski tok.
@@ -92,6 +119,7 @@
       </div>
 
     </p>
+  </div>
 
 
 
@@ -99,8 +127,7 @@
 
 
 
-
-
+<div>
     <h2>Svitak u krugu istosmjerne struje</h2>
     <p>
       Svitak (ili zavojnica) sastavni je element fizičkih 
@@ -146,7 +173,8 @@
       <br>
       <br>
     </p>
-
+  </div>
+  <div>
     <h2>Serijski spoj induktiviteta</h2>
     <p>
       Serijski spoj svitka prikazuje se serijskim spojem 
@@ -165,7 +193,8 @@
         jednak je zbroju pojedinih induktiviteta.
       </b> 
     </p>
-
+  </div>
+  <div>
     <h2>Paralelni spoj induktiviteta</h2>
     <p>
       induktiviteti se kod paralelnog spajanja poništavaju kao 
@@ -187,10 +216,53 @@
 
           $$ R_{uk}= \frac{L_1 \cdot L_2}{L_1 + L_2} $$
     </p>
+</div>
+
+<div>
+    <h1><em>Svitak u krugu izmjenične struje</em></h1>
+    <p>
+      Teče li kroz svitak induktivitet L izmjenična struja, 
+      zbog njezinog vremenskog mijenjanja na induktivitetu 
+      se javlja napon samoindukcije.
+    </p>
+    
+    <h2>Induktivni otpor</h2>
+    <p>
+      Uz sinusoidno promjenjivu struju i inducirani napon 
+      na induktivitetu je sinusoidnog oblika. 
+      <br>
+      <br>
+      Amplituda napona U_m razmjerna je kružnoj frekvenciji 
+      \omega , induktivitetu L i amplituda struje I_m, tj. 
+
+      $$ U_m = \omega \cdot L \cdot I_m $$
+
+      Omjer amplituda napona i struje određuje otpor koji 
+      induktivitet predstavlja izmjeničnoj struji. Taj se 
+      otpor naziva <em>induktivni otpor</em> i označava s X_L. 
+
+      $$ \frac{U_m}{I_m} = \frac{U}{I} = \omega \cdot L = X_L $$
+
+    </p>
+
+    <h2>Induktivna jalova snaga</h2>
+    <p>
+      umnožak struje i napona na induktivitetu daje sinusoidu 
+      trenutne snage čija je srednja vrijednost tj. radna snaga 
+      jednaka nuli. 
+      <br>
+      <br>
+      Umnožak efektivnih vrijednosti struje i napona, tj. snaga 
+      na induktivitetu naziva se, kao i kod kapaciteta, <em>jalova</em> 
+      (ili reaktivna) snaga, s jedinicom voltamper reaktivni (VAr) i 
+      oznakom Q_L
+
+      $$ Q_L = U \cdot I = \frac{U^2}{X_L} = I^2 \cdot X_L $$
+    </p>
+  </div>
+</div>
 
 
-
-    <h1><em>Induktivni otpor</em></h1>
     <ul>
         <li><a href="induktivniserija.html">Serijski spoj</a></li>
         <li><a href="induktivniparalela.html">Paralelni spoj</a></li>
