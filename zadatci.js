@@ -1,250 +1,338 @@
+const getVal=(id)=>{
+    return  Math.abs(Number((document.getElementById(id).value)));
+}
+const rjesi=(nesto)=>{
+    return nesto- nesto.toFixed(4)?nesto.toFixed(4):nesto;
+}
+
+
+
+// Laboratorijski zadatak 1
 function zadatak1(){
-    let naponizvora= Number(prompt("Unesite vrijednost napona izvora U"))
-    let otpor1 = Number(prompt("Unesite vrijednost otpora R1"))
-    let otpor2 = Number(prompt("Unesite vrijednost otpora R2"))
+    let ukupninapon = getVal("NaponIzvora"); 
+    let otpor1= getVal("IznosOtporaR1");
+    let otpor2 = getVal("IznosOtporaR2");
 
-            ukupniotpor = otpor1 + otpor2
-            ukupnastruja = naponizvora / ukupniotpor
-            padnapona1 = ukupnastruja * otpor1
-            padnapona2 = ukupnastruja * otpor2
-            snaga1 = padnapona1 * ukupnastruja
-            snaga2 = padnapona2 * ukupnastruja
-
-        alert("Struja koju daje izvor je " + ukupnastruja + "A")
-        alert("Pad napona na otporniku R1 je " + padnapona1 + "V")
-        alert("Pad napona na otporniku R2 je " + padnapona2 + "V")
-        alert("Snaga na otporu R1 je " + snaga1 + "W")
-        alert("Snaga na otporu R2 je " + snaga2 + "W")
+    var ukupniotpor = otpor1 + otpor2;
+    document.getElementById("ukupniotpor").innerHTML =rjesi(ukupniotpor) + " Ω";
+    var ukupnastruja = ukupninapon / ukupniotpor;
+    document.getElementById("ukupnastruja").innerHTML = rjesi(ukupnastruja) + " A";
+    var padnapona1 = ukupnastruja * otpor1;
+    document.getElementById("padnapona1").innerHTML = rjesi(padnapona1) + " V";
+    var padnapona2 = ukupnastruja * otpor2;
+    document.getElementById("padnapona2").innerHTML = rjesi(padnapona2) + " V";
+            
+    console.log (ukupnastruja);
+    console.log (otpor1);
+    console.log (otpor2);
+    console.log (ukupninapon);
+    console.log (padnapona1);
+    console.log (padnapona2);       
 }
+
+
+
+// Laboratorijski zadatak 2       
 function zadatak2(){
-    let a = Number(prompt("Unesite vrijednost otpornika R3"))
-    let b = Number(prompt("Unesite vrijednost struje I3"))
-    let c = Number(prompt("Unesite vrijednost otpora R2"))
-    let d = Number(prompt("Unesite vrijednost struje I1"))
-            
-            iup = a * b
-            ii2 = iup / c
-            ir1 = iup / d
-            iru = (1 / ir1)+(1 / c )+(1 / a)
-            iiu = d + ii2 + c
-            iui = iru * iiu
+    let uuk = getVal("UI2"); 
+    let r1= getVal("r1");
+    let r2 = getVal("r2");
+    let r3 = getVal("r3");
 
-        alert("Vrijednost struje I2 je " + ii2 + "A")
-        alert("Vrijednost otpora R1 je " + ir1 + "Ohma") 
-        alert("Napon izvora je " + iui + "V")
+    var rukzbroj = r1 + r2 + r3;
+    var rukumnozak = r1 * r2 * r3;       
+    var ruk =  rukumnozak / rukzbroj  ;
+    document.getElementById("ruk").innerHTML =rjesi(ruk) + " Ω";
+    var iuk = uuk / ruk;
+    document.getElementById("iuk").innerHTML = rjesi(iuk) + " A";
+    var strujar1 = uuk / r1;
+    document.getElementById("strujar1").innerHTML = rjesi(strujar1) + "A";
+    var strujar2 = uuk / r2;
+    document.getElementById("strujar2").innerHTML = rjesi(strujar2) + "A";
+    var strujar3 = uuk / r3;
+    document.getElementById("strujar3").innerHTML = rjesi(strujar3) + "A";
+
+    console.log (uuk);
+    console.log (r1);
+    console.log (r2);
+    console.log (r3);
+    console.log (ruk);
+    console.log (iuk);
+    console.log (strujar1); 
+    console.log (strujar2); 
+    console.log (strujar3); 
+
 }
+
+
+
+// Laboratorijski zadatak 3
 function zadatak3(){
-    let naponizvorar = Number(prompt("Unesite vrijednost napon izvora"))
-    let otporr1 = Number(prompt("Unesite vrijednost otpora R1"))
-    let otporr2 = Number(prompt("Unesite vrijednost otpora R2"))
-    let otporr3 = Number(prompt("Unesite vrijednost otpora R3"))
-    let otporr4 = Number(prompt("Unesite vrijednost otpora R4"))
+    let uukz3 = getVal("uukz3"); 
+    let r1z3= getVal("r1z3");
+    let r2z3 = getVal("r2z3");
+    let r3z3 = getVal("r3z3");
+    let r4z3 = getVal("r4z3");
 
-            otporr12 = (1 / otporr1) + (1 /otporr2)
-            otporr123 = (1 / otporr12) + (1 / otporr3)   
-            otporr1234 = otporr123 + otporr4
-            ukupnastrujar = naponizvorar / otporr1234
-            naponapabr = ukupnastrujar * otporr123
-            ampermetarr = naponapabr / otporr12
+    var r12z3zbroj = r1z3 + r2z3;
+    var r12z3umnozak = r1z3 * r2z3;
+    var r12z3 = r12z3umnozak / r12z3zbroj;
+    document.getElementById("r12z3").innerHTML =rjesi(r12z3) + " Ω";
+    var r123z3zbroj = r12z3 + r3z3;
+    var r123z3umnozak = r12z3 * r3z3;
+    var r123z3 = r123z3umnozak / r123z3zbroj;
+    document.getElementById("r123z3").innerHTML =rjesi(r123z3) + " Ω";
+    var rukz3 = r123z3 + r4z3;
+    document.getElementById("rukz3").innerHTML =rjesi(rukz3) + " Ω";
 
-        alert("Struja koju pokazuje ampermetar je " + ampermetarr + "A")
+    var iukz3 = uukz3 / rukz3;
+    document.getElementById("iukz3").innerHTML =rjesi(iukz3) + " A";
+    var ir4z3 = iukz3;
+    document.getElementById("ir4z3").innerHTML =rjesi(ir4z3) + " A";
+    var ir123z3 = iukz3;
+    document.getElementById("ir123z3").innerHTML =rjesi(ir123z3) + " A";
+
+    var ur123z3 = iukz3 * r123z3;
+    document.getElementById("ur123z3").innerHTML =rjesi(ur123z3) + " V";
+    var ur4z3 = iukz3 * r4z3;
+    document.getElementById("ur4z3").innerHTML =rjesi(ur4z3) + " V";
+    var ur3z3 = ur123z3;
+    document.getElementById("ur3z3").innerHTML =rjesi(ur3z3) + " V";
+    var ur12z3 = ur123z3;
+    document.getElementById("ur12z3").innerHTML =rjesi(ur12z3) + " V";
+    document.getElementById("ur1z3").innerHTML =rjesi(ur12z3) + " V";
+    document.getElementById("ur2z3").innerHTML =rjesi(ur12z3) + " V";
+
+    var ir3z3 = ur123z3 / r3z3;
+    document.getElementById("ir3z3").innerHTML =rjesi(ir3z3) + " A";
+    var ir12z3 = ur123z3 / r12z3;
+    document.getElementById("ir12z3").innerHTML =rjesi(ir12z3) + " A";
+    var ir2z3 = ur123z3 / r2z3;
+    document.getElementById("ir2z3").innerHTML =rjesi(ir2z3) + " A";
+    var ir1z3 = ur123z3 / r1z3;
+    document.getElementById("ir1z3").innerHTML =rjesi(ir1z3) + " A";
+    
+    console.log (uukz3);
+    console.log (r1z3);
+    console.log (r2z3);
+    console.log (r3z3);
+    console.log (r4z3);
+    console.log (r12z3);
+    console.log (r123z3);
+    console.log (rukz3);
+    console.log (iukz3);
+    console.log (ir4z3);
+    console.log (ir123z3);
+    console.log (ur4z3);
+    console.log (ur3z3);
+    console.log (ur12z3);
+    console.log (ir3z3);
+    console.log (ir12z3);
+    console.log (ir2z3);
+    console.log (ir1z3);
 }
+
+
+
+// Laboratorijski zadatak 4
 function zadatak4(){
-    let otport = Number(prompt("Unesite iznos otpora R"))
-    let induktivitett = Number(prompt("Unesite iznos zavojnice L(u H)"))
-    let kapacitett = Number(prompt("Unesite iznos kondezatora C (u F)"))
-    let naponizovrat = Number(prompt("Unesite iznos napona V"))
-    let frekvencijat = Number(prompt("Unesite frekvenciju f"))
+    let uukz4 = getVal("uukz4");
+    let c1z4 = getVal("c1z4");
+    let c2z4 = getVal("c2z4");
+    let c3z4 = getVal("c3z4");
 
-            impinduktivitett = 2 * 3.14159265359 * frekvencijat * induktivitett
-            impkapacitett = 1 / (2 * 3.1415925359 * frekvencijat * kapacitett)
-            impedancijat = otport + impinduktivitett + impkapacitett
-            strujat = naponizovrat / impedancijat
-        
-        alert("Struja koju daje izvor je " + strujat + "A")
+    var cukz4zbroj= c1z4 + c2z4 + c3z4;
+    var cukz4umnozak=c1z4 * c2z4 * c3z4;
+    var cukz4 = cukz4umnozak / cukz4zbroj;
+    document.getElementById("cukz4").innerHTML = cukz4 + " F";
+
+    var qukz4 = uukz4 * cukz4;
+    var q1z4 = qukz4;
+    var q2z4 = qukz4;
+    var q3z4 = qukz4;
+    document.getElementById("qukz4").innerHTML = qukz4 + " As";
+    document.getElementById("q1z4").innerHTML = qukz4 + " As";
+    document.getElementById("q2z4").innerHTML = qukz4 + " As";
+    document.getElementById("q3z4").innerHTML = qukz4 + " As";
 }
+
+
+
+// Laboratorijski zadatak 5
 function zadatak5(){
-    let kondezatorc1 = Number(prompt("Unesite vrijednost kondezatora C1 (u F)"))
-    let kondezatorc2 = Number(prompt("Unesite vrijednost kondezatora C2 (u F)"))
-    let kondezatorc3 = Number(prompt("Unesite vrijednost kondezatora C3 (u F)"))
-    let naponc = Number(prompt("Unesite iznos napona U (u V)"))
+    let uukz5 = getVal("uukz5");
+    let c1z5 = getVal("c1z5");
+    let c2z5 = getVal("c2z5");
+    let c3z5 = getVal("c3z5");
 
-            ukupni1c = (1 / kondezatorc1 ) + (1 / kondezatorc2) + (1 / kondezatorc3)
-            ukupnic = 1 / ukupni1c
-            Qc = ukupnic * naponc
-            uc1 = Qc / kondezatorc1
-            uc2 = Qc / kondezatorc2
-            uc3 = Qc / kondezatorc3
+    var cukz5 = c1z5+c2z5+c3z5 ;
+    document.getElementById("cukz5").innerHTML = cukz5 + " F";
 
-        alert("Ukupni kapacitiet spoja je " + ukupnic + "F")
-        alert("Ukupna kolicina naboja je " + Qc + "C")
-        alert("Napon na kondezatoru C1 " + uc1 + "V")
-        alert("Napon na kondezatoru C2 " + uc2 + "V")
-        alert("Napon na kondezatoru C3 " + uc3 + "V")        
+    var qukz5 = uukz5 * cukz5;
+    var q1z5 = uukz5 * c1z5;
+    var q2z5 = uukz5 * c2z5;
+    var q3z5 = uukz5 * c3z5;
+    document.getElementById("qukz5").innerHTML = qukz5 + " As";
+    document.getElementById("q1z5").innerHTML = q1z5  + " As";
+    document.getElementById("q2z5").innerHTML = q2z5  + " As";
+    document.getElementById("q3z5").innerHTML = q3z5  + " As";
+
 }
+
+
+
+// Laboratorijski zadatak 6
 function zadatak6(){
-    let snagap1 = Number(prompt("Kolika je snaga na otporniku P1"))
-    let otporp2 = Number(prompt("Koliko iznosi otpor R2"))
-    let strujap = Number(prompt("Unesite vrijednost struje izvora I"))
+    let uukz6 = getVal("uukz6");
+    let fz6 = getVal("fz6");
+    let c1z6 = getVal("c1z6");
+    let c2z6 = getVal("c2z6");
+    let c3z6 = getVal("c3z6");
+    let c4z6 = getVal("c4z6");
+    let c5z6 = getVal("c5z6");
+    let c6z6 = getVal("c6z6");
 
-            b = otporp2 *   strujap
-            b2 = b * b
-            cetriac = 4 * otporp2 * snagap1
-            dvaa = 2 * otporp2
-            strujap = (b + Math.sqrt(b2 - cetriac)) / dvaa
-            strujakva = strujap * strujap
-            otporp1 = snagap1 / strujakva
-            naponp = strujap * otporp1
+    var cukz6umnozak = c1z6 * c2z6 * c3z6 * c4z6 * c5z6 * c6z6;
+    var cukz6zbroj = c1z6 * c2z6 * c3z6 * c4z6 * c5z6 * c6z6;
+    var cukz6 = cukz6umnozak / cukz6zbroj;
+    document.getElementById("cukz6").innerHTML = cukz6 + " F";
 
-        alert("Iznos otpora R1 je " + otporp1 + "Ohma")
-        alert("Napon izvora je " + naponp + "V")
+    var oz6 = 2 * Math.PI * fz6;
+    var xukz6 = (1 / oz6 * cukz6);
+    document.getElementById("xukz6").innerHTML = rjsei(xukz6) + " Ω";
+    var x1z6 = (1 / (oz6 * c1z6));
+    document.getElementById("x1z6").innerHTML = rjesi(x1z6) + " Ω";
+    var x2z6 = (1 / (oz6 * c2z6));
+    document.getElementById("x2z6").innerHTML = rjesi(x2z6) + " Ω";
+    var x3z6 = (1 / (oz6 * c3z6));
+    document.getElementById("x3z6").innerHTML = rjesi(x3z6) + " Ω";
+    var x4z6 = (1 / (oz6 * c4z6));
+    document.getElementById("x4z6").innerHTML = rjesi(x4z6) + " Ω";
+    var x5z6 = (1 / (oz6 * c5z6));
+    document.getElementById("x5z6").innerHTML = rjesi(x5z6) + " Ω";
+    var x6z6 = (1 / (oz6 * c6z6));
+    document.getElementById("x6z6").innerHTML = rjesi(x6z6) + " Ω";
+
+    var iukz6 = uukz6 / xukz6;
+    document.getElementById("iukz6").innerHTML = rjesi(iukz6) + " A";
+
 }
+
+
+
+// Laboratorijski zadatak 7
 function zadatak7(){
-    let otpora1 = Number(prompt("Kolika je vrijednost otpora R1"))
-    let otpora2 = Number(prompt("Kolika je vrijednost otpora R2"))
-    let otpora3 = Number(prompt("Kolika je vrijednost otpora R3"))
-    let otpora4 = Number(prompt("Kolika je vrijednost otpora R4"))
-    let otpora5 = Number(prompt("Kolika je vrijednost otpora R5"))
-    let otpora6 = Number(prompt("Kolika je vrijednost otpora R6"))
-    let naponaa = Number(prompt("Unesite vrijednost napona izvora U"))
+    let uukz7 = getVal("uukz7");
+    let pvz7 = getVal("pvz7");
+    let l1z7 = getVal("l1z7");
+    let l2z7 = getVal("l2z7");
 
-            otpora12 = (otpora1 * otpora2) / (otpora1 + otpora2)
-            otpora123 = (otpora12 * otpora3 ) / (otpora12 + otpora3)
-            otpora45 = otpora4 + otpora5
-            otpora456 = (otpora45 * otpora6) / (otpora45 + otpora6)
-            otporau = otpora123 + otpora456 
-            strujaizvoraa = naponaa / otporau
-            padu1a = strujaizvoraa * otpora123
-            padu2a = strujaizvoraa * otpora456
-            strujaa1 = padu1a / otpora1
-            strujaa2 = padu1a / otpora2
-            strujaa3 = padu1a / otpora3
-            strujaa4 = padu2a / otpora45
-            strujaa5 = padu2a / otpora6
-        
-        alert("Struja I1 iznosi " + strujaa1 + "A")
-        alert("Struja I2 iznosi " + strujaa2 + "A")
-        alert("Struja I3 iznosi " + strujaa3 + "A")
-        alert("Struja I4 iznosi " + strujaa4 + "A")
-        alert("Struja I5 iznosi " + strujaa5 + "A")
+    var lukz7 = l1z7 + l2z7;
+    document.getElementById("lukz7").innerHTML = lukz7 + " mH";
+
+    var iukz7 = ((uukz7 * pvz7) / lukz7 );
+    document.getElementById("iukz7").innerHTML = rjesi(iukz7) + " A";
 }
+
+
+
+// Laboratorijski zadatak 8
 function zadatak8(){
-    let otporz1 = Number(prompt("Kolika je vrijednost otpora R1"))
-    let otporz2 = Number(prompt("Kolika je vrijednost otpora R2"))
-    let otporz3 = Number(prompt("Kolika je vrijednost otpora R3"))
-    let otporz4 = Number(prompt("Kolika je vrijednost otpora R4"))
+    let uukz8 = getVal("uukz8");
+    let pvz8 = getVal("pvz8");
+    let l1z8 = getVal("l1z8");
+    let l2z8 = getVal("l2z8");
+    let l3z8 = getVal("l3z8");
 
-            otporz12 = (otporz1 * otporz2) / (otporz1 + otporz2)
-            ukupniz = otporz12 + otporz3 + otporz4
+    var lukz8umnozak = l1z8*l2z8*l3z8 ;
+    var lukz8zbroj = l1z8+l2z8+l3z8;
+    var lukz8 = lukz8umnozak / lukz8zbroj;
+    document.getElementById("lukz8").innerHTML = lukz8 + " mH";
 
-        alert("Ukupni otpor strujnog kruga je " + ukupniz + "ohma")
+    var iukz8 = ((uukz8 * pvz8) / lukz8 );
+    document.getElementById("iukz8").innerHTML = rjesi(iukz8) + " A";
 }
+
+
+
+// Laboratorijski zadatak 9
 function zadatak9(){
-    let otporw1 = Number(prompt("Unesite vrijednost otpora R1"))
-    let otporw2 = Number(prompt("Unesite vrijednost otpora R2"))
-    let otporw3 = Number(prompt("Unesite vrijednost otpora R3"))
-    let otporw4 = Number(prompt("Unesite vrijednost otpora R4"))
-    let otporw5 = Number(prompt("Unesite vrijednost otpora R5"))
-    let otporw6 = Number(prompt("Unesite vrijednost otpora R6"))
-    let otporw7 = Number(prompt("Unesite vrijednost otpora R7"))
-    let otporw8 = Number(prompt("Unesite vrijednost otpora R8"))
+    let uukz9 = getVal("uukz9");
+    let fz9 = getVal("fz9");
+    let l1z9 = getVal("l1z9");
+    let l2z9 = getVal("l2z9");
+    let l3z9 = getVal("l3z9");
+    let l4z9 = getVal("l4z9");
+    let l5z9 = getVal("l5z9");
 
-            otporwa123 = ( 1 / otporw1) + ( 1 / otporw2) + ( 1 / otporw3)
-            otporw123 = 1 / otporwa123
-            otporwa56 = ( 1 / otporw5 ) + ( 1 / otporw6)
-            otporw56 = 1 / otporwa56
-            otporw78 = otporw7 + otporw8
-            otporw123456 = otporw123 + otporw4 + otporw56
-            otporwuk = (otporw123456 * otporw78) / (otporw123456 + otporw78)
+    var l123z9umnozak = l1z9*l2z9*l3z9 ;
+    var l123z9zbroj = l1z9+l2z9+l3z9;
+    var l123z9 = l123z9umnozak / l123z9zbroj;
+    var l45z9umnozak = l4z9*l5z9;
+    var l45z9zbroj = l4z9+l5z9;
+    var l45z9 = l45z9umnozak/l45z9zbroj;
+    var lukz9 = l123z9 + l45z9;
+    document.getElementById("lukz9").innerHTML = rjesi(lukz9) + " mH";
+    
+    var oz9 = 2 * Math.PI * fz9;
+    var xukz9 = (oz9 * lukz9);
+    document.getElementById("xukz9").innerHTML = rjesi(xukz9) + " Ω";
+    var x1z9 = (oz9 * l1z9);
+    document.getElementById("x1z9").innerHTML = rjesi(x1z9) + " Ω";
+    var x2z9 = (oz9 * l2z9);
+    document.getElementById("x2z9").innerHTML = rjesi(x2z9) + " Ω";
+    var x3z9 = (oz9 * l3z9);
+    document.getElementById("x3z9").innerHTML = rjesi(x3z9) + " Ω";
+    var x4z9 = (oz9 * l4z9);
+    document.getElementById("x4z9").innerHTML = rjesi(x4z9) + " Ω";
+    var x5z9 = (oz9 * l5z9);
+    document.getElementById("x5z9").innerHTML = rjesi(x5z9) + " Ω";
 
-        alert("Ukupni otpor spoja je " + otporwuk + "Ohma")
+    var iukz9 = uukz9 / xukz9 * oz9;
+    document.getElementById("iukz9").innerHTML = rjesi(iukz9) + " A";
+
 }
+
+
+
+// Laboratorijski zadatak 10
 function zadatak10(){
-    let otpore1 = Number(prompt("Koliko iznosi R1"))
-    let otpore2 = Number(prompt("Koliko iznosi R2"))
-    let otpore3 = Number(prompt("Koliko iznosi R3"))
-    let otpore4 = Number(prompt("Koliko iznosi R4"))
-    let naponeu = Number(prompt("kolika je vrijednost napona U"))
+    let uukz10 = getVal("uukz10");
+    let fz10 = getVal("fz10");
+    let c1z10 = getVal("c1z10");
+    let r1z10 = getVal("r1z10");
 
-            otpore2a3 = otpore2 + otpore3
-            otpore123 = (otpore1 * otpore2a3) / (otpore1 + otpore2a3)
-            otporeuk = otpore123 + otpore4
-            strujaeiz = naponeu / otporeuk
-            napone2 = strujaeiz * otpore4
-            napone1 = naponeu - napone2
-            strujae1 = napone1 / otpore1
-            strujae2 = napone1 / otpore2a3
-            snagaep1 = strujae1 * strujae1 * otpore1
-            snagaep2 = strujae2 * strujae2 * otpore2
-            snagaep3 = strujae2 * strujae2 * otpore3
-            snagaep4 = strujaeiz * strujaeiz * otpore4
+    var c1z10pf = c1z10 * Math.pow(10, -9);
+    var oz10 = 2 * Math.PI * fz10;
+    var x1z10 = 1 / (oz10 * c1z10pf);
+    document.getElementById("x1z10").innerHTML = rjesi(x1z10) + " Ω";
 
-        alert("Snaga na otporniku R1 " + snagaep1 + "W")
-        alert("Snaga na otporniku R2 " + snagaep2 + "W")
-        alert("Snaga na otporniku R3 " + snagaep3 + "W")
-        alert("Snaga na otporniku R4 " + snagaep4 + "W")
+    var impz10 = Math.sqrt(Math.pow(r1z10, 2) + Math.pow(x1z10, 2));
+    document.getElementById("impz10").innerHTML = rjesi(impz10) + " Ω";
+
+    var iukz10 = uukz10 / impz10;
+    document.getElementById("iukz10").innerHTML = rjesi(iukz10) + " A";
+
 }
+
+
+
+// Laboratorijski zadatak 11
 function zadatak11(){
-    let naponm = Number(prompt("Unesite vrijednost napona izvora U"))
-    let snagam2 = Number(prompt("Unesite vrijednost dnage P2 "))
-    let otporm1 = Number(prompt("Koliko iznosi otpor R1"))
-            
-            bkvadratm = naponm * naponm
-            mac = 4 * otporm1 * snagam2
-            mm = Math.sqrt(bkvadratm - mac)
-            strujam = ( naponm - mm ) / (2 * otporm1)
-            strujakvadm = strujam * strujam
-            otporm2 = snagam2 / strujakvadm 
+    let uukz11 = getVal("uukz11");
+    let fz11 = getVal("fz11");
+    let c1z11 = getVal("c1z11");
+    let r1z11= getVal("r1z11");
 
-        alert("Struja koju daje izvor je " + strujam + "A")
-        alert("Vrijednost otpora R2 je " + otporm2 + "Ohma")
-}
-function zadatak12(){
-    let otporb1 = Number(prompt("Unesite otpor grijaca R1 "))
-    let otporb2 = Number(prompt("Unesite otpor grijaca R2 "))
-    var duljinab = 653.4
-    var otporizovrab = 0.8
-    var prijesjekalb = 25
-    var strujaizb = 50
-    var roodm = 0.0287
-        
-            otporgrijača12 = ( otporb1 * otporb2 ) / (otporb1 + otporb2)
-            napontrosilab12 = otporgrijača12 * strujaizb
-            rvb = 2 * roodm * ( duljinab / prijesjekalb )
-            gubitaknaponaspojb = rvb * strujaizb
-            naponnaizvorub = napontrosilab12 + gubitaknaponaspojb
-            elektromotornasilab = naponnaizvorub + otporizovrab * strujaizb
-            snaganatrosilimab = strujaizb * strujaizb * otporgrijača12
-            gubitagpvodab = strujaizb * strujaizb * rvb 
-            gubotakpizvorab = strujaizb * strujaizb *otporizovrab
-            sangaizobrab = elektromotornasilab * strujaizb
-        
-        alert("Napon na trosilu je" + napontrosilab12 + "V")
-        alert("Gubitak napona na spojnom vodu je " + gubitaknaponaspojb + "V")    
-        alert("Napon na stezaljkama izvora je " + naponnaizvorub + "V")
-        alert("Elektromotorna sila izvora je " + elektromotornasilab + "V")
-        alert("Razvijena snaga na tosilima je " + snaganatrosilimab + "W")
-}
-function zadatak13(){
-    let c1y = Number(prompt("Koliko iznosi kapacitet kondezatora C1"))
-    let c2y = Number(prompt("Koliko iznosi kapacitet kondezatora C2"))
-    let c3y = Number(prompt("Koliko iznosi kapacitet kondezatora C2"))
-    let uy = Number(prompt("Unesite vrijednost napona izvora U"))
+    var c1z11pf = c1z11 * Math.pow(10, -9);
+    var oz11 = 2 * Math.PI * fz11;
+    var x1z11 = 1 / (oz11 * c1z11pf);
+    document.getElementById("x1z11").innerHTML = rjesi(x1z11) + " Ω";
 
-            ukupnicy = c1y + c2y + c3y
-            q1y = c1y * uy
-            q2y = c2y * uy
-            q3y = c3y * uy
-            quky = q1y + q2y + q3y
-            a1y = 0.5 * q1y * uy
-            a2y = 0.5 * q2y * uy
-            a3y = 0.5 * q3y * uy
+    var admz11 = Math.sqrt(Math.pow(r1z11, 2) + Math.pow(x1z11, 2));
+    document.getElementById("impz10").innerHTML = rjesi(impz10) + " Ω";
 
-        alert("Ukupni kapacitet je " + ukupnicy + "F")
-        alert("Kolicina naboja na C1 je " + q1y + "C")
-        alert("Kolicina naboja na C2 je " + q2y + "C")
-        alert("Kolicina naboja na C3 je " + q3y + "C")
-        alert("Nagomilana energija na C1 je " + a1y + "J")
-        alert("Nagomilana energija na C2 je " + a2y + "J")
-        alert("Nagomilana energija na C3 je " + a3y + "J")
+    var iukz10 = uukz10 / impz10;
+    document.getElementById("iukz10").innerHTML = rjesi(iukz10) + " A";
+
 }

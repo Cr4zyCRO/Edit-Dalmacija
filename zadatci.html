@@ -18,6 +18,9 @@
 
     <title>Zadatci</title>
 </head>
+
+
+
 <body>
     <ul id="dropdown1" class="dropdown-content">
         <li><a href="ROhmsko.html" class=" black-text">OTPORNICI</a></li>
@@ -51,57 +54,405 @@
       <path fill="#81d4fa" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,192C384,203,480,181,576,149.3C672,117,768,75,864,101.3C960,128,1056,224,1152,256C1248,288,1344,256,1392,240L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
     </svg> 
                 
-    <h1><em>Zadatci</em></h1>
-        Zadatci sa ohmskim trošilima 
-            <p>1.Izracunaj struju koju daje izvor,padove napona i snagu na svakom od trošila  </p>  
-                <img src="slike/1.zad.png" alt="">
-                    <button onclick="zadatak1()">Rijesenje</button>
-                        
-            <p>2.Izracunaj vrijednost otpornika R1,struje I2 i napona izvora.</p>   
-                <img src="slike/2.zad.png" alt="">
-                    <button onclick="zadatak2()">Rijesenje</button>
-                
-            <p>3.Izracunaj sve struju koju pokazuje ampermatar</p>
-                <img src="slike/3.zad.jpg" width="340" height="270">
-                   <button onclick="zadatak3()">Rijesenje</button>
-            <p>4.Izracunaj struju izvora  ako su zadani otpor R, induktivitet L i kapacitiet C</p>
-                <img src="slike/4.zad.png" alt="">
-                    <button onclick="zadatak4()">Rijesenje</button>
-            <p>5. Tri kondezatora spojeni su serijski i priključeni na napon U. Odredite kapacitiet spoja C, ukupnu kolicinu
-                naboja Q, napone na kodezatorima U1,U2,U3 </p>
-                <img src="slike/5.zad.jpg" width="340" height="270">
-                    <button onclick="zadatak5()">Rijesenje</button>
-            <p>6.Trosilo snage P1,otpora R1 spojeno je u paralelu s drugim trošilom otpora R2.Struja izvora je I.
-                Izracunajte iznos otpora R1 i napon izvora U .
-            </p>           
-                <img src="slike/6.zad.jpg" width="340" height="270">
-                    <button onclick="zadatak6()">Rijesenje</button>     
-            <p>7.Otpori od R1 do R6 su spojeni prema slici uz napon izvora U.Odredite iznose struja u svim granama.</p>
-                <img src="slike/7.zad.jpg" width="340" height="270">    
-                    <button onclick="zadatak7()">Rijesenje</button>
-            <p>8.Otpori R1,R2,R3,R4 spojeni su kao na slici .Odredite ukupni otpor spoja</p>
-                <img src="slike/8.zad.jpg" width="340" height="270">
-                    <button onclick="zadatak8()">Rijesenje</button>
-            <p>9.Spoj poznatih otpornika od R1 do R8 prikazan je na shemi. Odredite ukupni optor R</p>
-                <img src="slike/10.zad.jpg" width="340" height="270">
-                    <button onclick="zadatak9()">Rijesenje</button>
-            <p>10.Cetiri otpornika spojena su prema shemi uz zadani napon izvora U. Odredite snage na svakom od otpornika</p>
-                <img src="slike/11.zad.jpg" width="340" height="270">
-                    <button onclick="zadatak10()">Rijesenje</button>
-            <p>11.Dva trošila spojena su u seriju pri naponu izvora U odredi otpor trošila R2 i struju izvora uz poznatu sangu P2</p>
-                <img src="slike/12.zad.jpg" width="340" height="270">
-                    <button onclick="zadatak11()">Rijesenje</button>
-            <p>12.Dva grijača s otporima R1 i R2 spojena  su na elektricni izvor aluminskim vodovima duljine 653,4 prijesjeka vodica 25 mm2.Mjeranja
-                su pokazala da je vrijednost unutarnjeg napona izovra 0.8 Ohma te da je sturja spoja 50 A. Odredite napon na trošilu, gubitak napona na spojnim 
-                vodou, elektromotornu silu izvora,razvijenu snagu na otporima.
-            </p>
-                <img src="slike/13.zad.jpg" width="340" height="270">
-                    <button onclick="zadatak12()">Rijesenje</button>
-            <p>13.Tri kondeztaoea spojena su paralelno i priključeni na napon izovra U. Odredite: kapacitiet spoja, kolicinu naboja na svakom
-                od kondezatora i  nagomilane energije u kondezatorima
-            </p>
-                <img src="slike/14.zad.jpg" width="340" height="270">
-                    <button onclick="zadatak13()">Rijesenje</button>
+
+
+    
+<h1><em>Zadatci</em></h1>
+        
+            
+<!--LABORATORIJ 1-->
+<div class="TaskContainer">
+    Zadatci sa ohmskim trošilima 
+            <p>1.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), iznos otpora \((R_2)\). </p>
+    <img src="slike/Zadatak1.png" alt="">
+    <form method="POST">
+        <label for="Napon">Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="NaponIzvora" name="NaponIzvora"><br><br>
+        <label for="Otpor">Iznos otpora \((R_1)\) :</label>
+        <input type="number" min="0" id="IznosOtporaR1" name="IznosOtporaR1"><br><br>
+        <label for="Otpor">Iznos otpora \((R_2)\) :</label>
+        <input type="number" min="0" id="IznosOtporaR2" name="IznosOtporaR2"><br><br>
+        <button type="button" onclick="zadatak1()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label for="Struja"><b>Struja izvora \((I)\) :</b></label>
+    <output id="ukupnastruja" ></output><br>
+    <label for="Ukupniotpor"><b>Ukupni otpor \((R_{uk})\) :</b></label>
+    <output id="ukupniotpor"></output><br>
+    <label for="NaponNaR1"><b>Napon na \((R_1)\) :</b></label>
+    <output id="padnapona1" ></output><br>
+    <label for="NaponNaR2"><b>Napon na \((R_2)\) :</b></label>
+    <output id="padnapona2"></output><br>
+
+</div>
+<!--LABORATORIJ 1 KRAJ-->
+
+
+
+<div class="TaskContainer">
+    Zadatci sa ohmskim trošilima 
+            <p>2.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+                iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak2.png" alt="">
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="UI2" name="NaponIzvora"><br><br>
+        <label>Iznos otpora \((R_1)\) :</label>
+        <input type="number" min="0" id="r1" name="IznosOtporaR1"><br><br>
+        <label>Iznos otpora \((R_2)\) :</label>
+        <input type="number" min="0" id="r2" name="IznosOtporaR2"><br><br>
+        <label>Iznos otpora \((R_3)\) :</label>
+        <input type="number" min="0" id="r3" name="IznosOtporaR3"><br><br>
+        <button type="button" onclick="zadatak2()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Ukupni otpor \((R_{uk})\) :</b></label>
+    <output id="ruk"></output><br>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iuk" ></output><br>
+    <label><b>Struja kroz \((R_1)\) :</b></label>
+    <output id="strujar1" ></output><br>
+    <label><b>Struja kroz \((R_2)\) :</b></label>
+    <output id="strujar2"></output><br>
+    <label><b>Struja kroz \((R_3)\) :</b></label>
+    <output id="strujar3"></output><br>
+</div>
+<!--LABORATORIJ 2 KRAJ-->
+
+
+<div class="TaskContainer">
+    Zadatci sa ohmskim trošilima 
+            <p>2.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+                iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+            <img src="slike/Zadatak3.png">
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz3" name="NaponIzvora"><br><br>
+        <label>Iznos otpora \((R_1)\) :</label>
+        <input type="number" min="0" id="r1z3" name="IznosOtporaR1"><br><br>
+        <label>Iznos otpora \((R_2)\) :</label>
+        <input type="number" min="0" id="r2z3" name="IznosOtporaR2"><br><br>
+        <label>Iznos otpora \((R_3)\) :</label>
+        <input type="number" min="0" id="r3z3" name="IznosOtporaR3"><br><br>
+        <label>Iznos otpora \((R_4)\) :</label>
+        <input type="number" min="0" id="r4z3" name="IznosOtporaR4"><br><br>
+        <button type="button" onclick="zadatak3()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Ukupni otpor \((R_{uk})\) :</b></label>
+    <output id="rukz3"></output><br>
+    <label><b>Ukupni otpor \((R_{12})\) :</b></label>
+    <output id="r12z3"></output><br>
+    <label><b>Ukupni otpor \((R_{123})\) :</b></label>
+    <output id="r123z3"></output><br>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz3" ></output><br>
+    <label><b>Struja kroz \((R_1)\) :</b></label>
+    <output id="ir1z3" ></output><br>
+    <label><b>Struja kroz \((R_2)\) :</b></label>
+    <output id="ir2z3"></output><br>
+    <label><b>Struja kroz \((R_3)\) :</b></label>
+    <output id="ir3z3"></output><br>
+    <label><b>Struja kroz \((R_4)\) :</b></label>
+    <output id="ir4z3"></output><br>
+    <label><b>Struja kroz \((R_{12})\) :</b></label>
+    <output id="ir12z3"></output><br>
+    <label><b>Struja kroz \((R_{123})\) :</b></label>
+    <output id="ir123z3"></output><br>
+    <label><b>Pad napona na \((R_1)\) :</b></label>
+    <output id="ur1z3"></output><br>
+    <label><b>Pad napona na \((R_2)\) :</b></label>
+    <output id="ur2z3"></output><br>
+    <label><b>Pad napona na \((R_3)\) :</b></label>
+    <output id="ur3z3"></output><br>
+    <label><b>Pad napona na \((R_4)\) :</b></label>
+    <output id="ur4z3"></output><br>
+    <label><b>Pad napona na \((R_{12})\) :</b></label>
+    <output id="ur12z3"></output><br>
+    <label><b>Pad napona na \((R_{123})\) :</b></label>
+    <output id="ur123z3"></output><br>
+    
+</div>
+<!--LABORATORIJ 3 KRAJ-->
+
+<div class="TaskContainer"> 
+    <p>4.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak4.png" alt="">
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz4" ><br><br>
+        <label>Iznos kapaciteta \((C_1)\) :</label>
+        <input type="number" min="0" id="c1z4" ><br><br>
+        <label>Iznos kapaciteta \((C_2)\) :</label>
+        <input type="number" min="0" id="c2z4" ><br><br>
+        <label>Iznos kapaciteta \((C_3)\) :</label>
+        <input type="number" min="0" id="c3z4" ><br><br>
+        <button type="button" onclick="zadatak4()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Ukupni kapacitet \((C_{uk})\) :</b></label>
+    <output id="cukz4"></output><br>
+    <label><b>Ukupni naboj \((C_{uk})\)</b></label>
+    <output id="qukz4" ></output><br>
+    <label><b>Naboj na \((C_1)\) :</b></label>
+    <output id="q1z4" ></output><br>
+    <label><b>Naboj na \((C_2)\) :</b></label>
+    <output id="q2z4"></output><br>
+    <label><b>Naboj na \((C_3)\) :</b></label>
+    <output id="q3z4"></output><br>
+
+</div>
+<!--LABORATORIJ 4 KRAJ-->
+
+
+
+<div class="TaskContainer"> 
+    <p>4.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak5.png" alt="">
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz5" ><br><br>
+        <label>Iznos kapaciteta \((C_1)\) :</label>
+        <input type="number" min="0" id="c1z5" ><br><br>
+        <label>Iznos kapaciteta \((C_2)\) :</label>
+        <input type="number" min="0" id="c2z5" ><br><br>
+        <label>Iznos kapaciteta \((C_3)\) :</label>
+        <input type="number" min="0" id="c3z5" ><br><br>
+        <button type="button" onclick="zadatak5()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Ukupni kapacitet \((C_{uk})\) :</b></label>
+    <output id="cukz5"></output><br>
+    <label><b>Ukupni naboj \((C_{uk})\)</b></label>
+    <output id="qukz5" ></output><br>
+    <label><b>Naboj na \((C_1)\) :</b></label>
+    <output id="q1z5" ></output><br>
+    <label><b>Naboj na \((C_2)\) :</b></label>
+    <output id="q2z5"></output><br>
+    <label><b>Naboj na \((C_3)\) :</b></label>
+    <output id="q3z5"></output><br>
+
+</div>
+<!--LABORATORIJ 5 KRAJ-->
+
+
+
+<div class="TaskContainer"> 
+    <p>6.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak6.png" >
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz6" ><br><br>
+        <label>Frekvencija izvora \((f)\) :</label>
+        <input type="number" min="0" id="fz6" ><br><br>
+        <label>Iznos kapaciteta \((C_1)\) :</label>
+        <input type="number" min="0" id="c1z6" ><br><br>
+        <label>Iznos kapaciteta \((C_2)\) :</label>
+        <input type="number" min="0" id="c2z6" ><br><br>
+        <label>Iznos kapaciteta \((C_3)\) :</label>
+        <input type="number" min="0" id="c3z6" ><br><br>
+        <label>Iznos kapaciteta \((C_4)\) :</label>
+        <input type="number" min="0" id="c4z6" ><br><br>
+        <label>Iznos kapaciteta \((C_5)\) :</label>
+        <input type="number" min="0" id="c5z6" ><br><br>
+        <label>Iznos kapaciteta \((C_6)\) :</label>
+        <input type="number" min="0" id="c6z6" ><br><br>
+        <button type="button" onclick="zadatak6()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz6"></output><br>
+    <label><b>Ukupni kapacitet \((C_{uk})\) :</b></label>
+    <output id="cukz6"></output><br>
+    <label><b>Ukupni kapacitivni otpor \((X_{uk})\)</b></label>
+    <output id="xukz6" ></output><br>
+    <label><b>Kapacitivni otpor \((X_{C1})\) :</b></label>
+    <output id="x1z6" ></output><br>
+    <label><b>Kapacitivni otpor \((X_{C2})\) :</b></label>
+    <output id="x2z6" ></output><br>
+    <label><b>Kapacitivni otpor \((X_{C3})\) :</b></label>
+    <output id="x3z6" ></output><br>
+    <label><b>Kapacitivni otpor \((X_{C4})\) :</b></label>
+    <output id="x4z6" ></output><br>
+    <label><b>Kapacitivni otpor \((X_{C5})\) :</b></label>
+    <output id="x5z6" ></output><br>
+    <label><b>Kapacitivni otpor \((X_{C6})\) :</b></label>
+    <output id="x6z6" ></output><br>
+
+</div>
+<!--LABORATORIJ 6 KRAJ-->
+
+
+
+<div class="TaskContainer"> 
+    <p>6.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak7.png" >
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz7" placeholder="Iznos u [V]"><br><br>
+        <label>Promjena vremena \((\Delta t)\) :</label>
+        <input type="number" min="0" id="pvz7" placeholder="Iznos u [s]"><br><br>
+        <label>Iznos induktiviteta \((L_1)\) :</label>
+        <input type="number" min="0" id="l1z7" placeholder="Iznos u [mH]"><br><br>
+        <label>Iznos induktiviteta \((L_2)\) :</label>
+        <input type="number" min="0" id="l2z7" placeholder="Iznos u [mH]" ><br><br>
+        <button type="button" onclick="zadatak7()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz7"></output><br>
+    <label><b>Ukupni induktivitet \((L_{uk})\) :</b></label>
+    <output id="lukz7"></output><br>
+    
+</div>
+<!--LABORATORIJ 7 KRAJ-->
+
+
+
+<div class="TaskContainer"> 
+    <p>6.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak8.png" >
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz8" placeholder="Iznos u [V]"><br><br>
+        <label>Promjena vremena \((\Delta t)\) :</label>
+        <input type="number" min="0" id="pvz8" placeholder="Iznos u [s]"><br><br>
+        <label>Iznos induktiviteta \((L_1)\) :</label>
+        <input type="number" min="0" id="l1z8" placeholder="Iznos u [mH]"><br><br>
+        <label>Iznos induktiviteta \((L_2)\) :</label>
+        <input type="number" min="0" id="l2z8" placeholder="Iznos u [mH]"><br><br>
+        <label>Iznos induktiviteta \((L_3)\) :</label>
+        <input type="number" min="0" id="l3z8" placeholder="Iznos u [mH]" ><br><br>
+        <button type="button" onclick="zadatak8()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz8"></output><br>
+    <label><b>Ukupni induktivitet \((L_{uk})\) :</b></label>
+    <output id="lukz8"></output><br>
+    
+</div>
+<!--LABORATORIJ 8 KRAJ-->
+
+
+<div class="TaskContainer"> 
+    <p>6.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak9.png" >
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz9" placeholder="Iznos u [V]"><br><br>
+        <label>Frekvencija izvora \((f)\) :</label>
+        <input type="number" min="0" id="fz9" placeholder="Iznos u [Hz]" ><br><br>
+        <label>Iznos induktiviteta \((L_1)\) :</label>
+        <input type="number" min="0" id="l1z9" placeholder="Iznos u [mH]"><br><br>
+        <label>Iznos induktiviteta \((L_2)\) :</label>
+        <input type="number" min="0" id="l2z9" placeholder="Iznos u [mH]"><br><br>
+        <label>Iznos induktiviteta \((L_3)\) :</label>
+        <input type="number" min="0" id="l3z9" placeholder="Iznos u [mH]" ><br><br>
+        <label>Iznos induktiviteta \((L_4)\) :</label>
+        <input type="number" min="0" id="l4z9" placeholder="Iznos u [mH]"><br><br>
+        <label>Iznos induktiviteta \((L_5)\) :</label>
+        <input type="number" min="0" id="l5z9" placeholder="Iznos u [mH]"><br><br>
+        <button type="button" onclick="zadatak9()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz9"></output><br>
+    <label><b>Ukupni induktivitet \((L_{uk})\) :</b></label>
+    <output id="lukz9"></output><br>
+    <label><b>Ukupni induktivni otpor \((X_{uk})\)</b></label>
+    <output id="xukz9" ></output><br>
+    <label><b>Induktivni otpor \((X_{L1})\) :</b></label>
+    <output id="x1z9" ></output><br>
+    <label><b>Induktivni otpor \((X_{L2})\) :</b></label>
+    <output id="x2z9" ></output><br>
+    <label><b>Induktivni otpor \((X_{L3})\) :</b></label>
+    <output id="x3z9" ></output><br>
+    <label><b>Induktivni otpor \((X_{L4})\) :</b></label>
+    <output id="x4z9" ></output><br>
+    <label><b>Induktivni otpor \((X_{L5})\) :</b></label>
+    <output id="x5z9" ></output><br> 
+    
+</div>
+<!--LABORATORIJ 9 KRAJ-->
+
+
+
+<div class="TaskContainer"> 
+    <p>6.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak10.png" >
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz10" placeholder="Iznos u [V]"><br><br>
+        <label>Frekvencija izvora \((f)\) :</label>
+        <input type="number" min="0" id="fz10" placeholder="Iznos u [Hz]" ><br><br>
+        <label>Iznos kapaciteta \((C_1)\) :</label>
+        <input type="number" min="0" id="c1z10" placeholder="Iznos u [pF]"><br><br>
+        <label for="Otpor">Iznos otpora \((R_1)\) :</label>
+        <input type="number" min="0" id="r1z10" placeholder="Iznos u [Ω]"><br><br>
+        <button type="button" onclick="zadatak10()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz10"></output><br>
+    <label><b>Kapacitivni otpor \((X_{C1})\) :</b></label>
+    <output id="x1z10"></output><br>
+    <label><b>impendancija \((Z)\) :</b></label>
+    <output id="impz10"></output><br>
+
+</div>
+<!--LABORATORIJ 10 KRAJ-->
+
+
+
+<div class="TaskContainer"> 
+    <p>6.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak11.png" >
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz11" placeholder="Iznos u [V]"><br><br>
+        <label>Frekvencija izvora \((f)\) :</label>
+        <input type="number" min="0" id="fz11" placeholder="Iznos u [Hz]" ><br><br>
+        <label>Iznos kapaciteta \((C_1)\) :</label>
+        <input type="number" min="0" id="c1z11" placeholder="Iznos u [pF]"><br><br>
+        <label for="Otpor">Iznos otpora \((R_1)\) :</label>
+        <input type="number" min="0" id="r1z11" placeholder="Iznos u [Ω]"><br><br>
+        <button type="button" onclick="zadatak11()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz10"></output><br>
+    <label><b>Kapacitivni otpor \((X_{C1})\) :</b></label>
+    <output id="x1z10"></output><br>
+    <label><b>impendancija \((Z)\) :</b></label>
+    <output id="impz10"></output><br>
+
+</div>
+<!--LABORATORIJ 11 KRAJ-->
+
+
+
+
+                    
                 
 
 
