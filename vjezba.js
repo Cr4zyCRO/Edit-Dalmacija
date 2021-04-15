@@ -351,3 +351,51 @@ function vjezba19(){
             alert("Neuspiješno si riješio zadatak")
         }
 }
+function vjezba20(){
+    let odgovor20a = Number(prompt("Unesi kapacitet C3 (vrijednost u pF)"))
+    let odgovor20b = Number(prompt("i vrijdenost kapaciteta C5 (vrijednost u pF)"))
+
+        if (odgovor20a == 40 ) {
+            alert("Točno si izračunao kapacitet C3")
+        } else {
+            alert("Nažalost krivo si odgovorio za C3")
+        }
+        if (odgovor20b == 30) {
+            alert("Tvoj rezultat za C5 je točan ")
+        } else {
+            alert("Netočan odgovor za C5")
+        }
+}
+function vjezba21(){
+    let odgovor21a = Number(prompt("Koliki je kapacitet kondezatora C4(vrijednost u mikroF)"))
+       
+        if (odgovor21a == 2) {
+            alert("Točno riješen zadatak")
+        } else {
+            alert("Ovaj zadatak je netočno riješen")
+        }
+}
+function vjezba22(){
+    let odgovor22a = Number(prompt("Unesi akumuliranu enrergiju kondezatora A2 je (vrijednos u mJ)"))
+
+        if (odgovor22a == 8) {
+            alert("Akumulirana enrgija A2 je točna")
+        } else {
+            alert("Netočno izračunata akumulirana energija")
+        }
+}
+function vjezba23(){
+    let odgovor23a = Number(prompt("Unesi vrijednost kapaciteta kondezatora C1 (u mikroF)"))
+    let odgovor23b = Number(prompt("i vrijednost kapaciteta C2"))
+
+        if (odgovor23a == 20) {
+            alert("C1 je točan")
+        } else {
+            alert("C1 je netočan")
+        }
+        if (odgovor23b == 30) {
+            alert("Točno odgovoreno za C2")
+        } else {
+            alert("Netočno određen C2")
+        }
+}
