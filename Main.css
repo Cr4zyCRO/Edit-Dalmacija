@@ -28,6 +28,10 @@ body {
 
 .TaskContainer {
   align-content: center;
-  width: 500px;
+  width: 600px;
   margin: 200px auto;
+}
+
+.TaskContainerImg {
+  width: inherit;
 }

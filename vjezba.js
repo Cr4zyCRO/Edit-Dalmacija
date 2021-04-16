@@ -1,3 +1,6 @@
+M.AutoInit();
+$(".dropdown-trigger").dropdown();
+
 
 function vjezba1(){
     let odgovor1 = Number(prompt("Kolko si dobio ukupni otpor je "))
