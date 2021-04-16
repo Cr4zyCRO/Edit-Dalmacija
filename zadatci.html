@@ -400,10 +400,8 @@
     <form method="POST">
         <label>Napon izvora \((U)\) :</label>
         <input type="number" min="0" id="uukz10" placeholder="Iznos u [V]"><br><br>
-        <label>Frekvencija izvora \((f)\) :</label>
-        <input type="number" min="0" id="fz10" placeholder="Iznos u [Hz]" ><br><br>
-        <label>Iznos kapaciteta \((C_1)\) :</label>
-        <input type="number" min="0" id="c1z10" placeholder="Iznos u [pF]"><br><br>
+        <label>Iznos kapacitivnog otpora \((X_C)\) :</label>
+        <input type="number" min="0" id="x1z10" placeholder="Iznos u [Ω]"><br><br>
         <label for="Otpor">Iznos otpora \((R_1)\) :</label>
         <input type="number" min="0" id="r1z10" placeholder="Iznos u [Ω]"><br><br>
         <button type="button" onclick="zadatak10()" >Calculate</button>
@@ -412,10 +410,14 @@
     <form method="PUT"></form>
     <label><b>Struja izvora \((I)\) :</b></label>
     <output id="iukz10"></output><br>
-    <label><b>Kapacitivni otpor \((X_{C1})\) :</b></label>
-    <output id="x1z10"></output><br>
-    <label><b>impendancija \((Z)\) :</b></label>
+    <label><b>Prividni otpor \((Z)\) :</b></label>
     <output id="impz10"></output><br>
+    <label><b>Prividna snaga \((S)\) :</b></label>
+    <output id="psz10"></output><br>
+    <label><b>Radna snaga \((P)\) :</b></label>
+    <output id="rsz10"></output><br>
+    <label><b>Jalova snaga \((Q_C)\) :</b></label>
+    <output id="jsz10"></output><br>
 
 </div>
 <!--LABORATORIJ 10 KRAJ-->
@@ -429,25 +431,144 @@
     <form method="POST">
         <label>Napon izvora \((U)\) :</label>
         <input type="number" min="0" id="uukz11" placeholder="Iznos u [V]"><br><br>
-        <label>Frekvencija izvora \((f)\) :</label>
-        <input type="number" min="0" id="fz11" placeholder="Iznos u [Hz]" ><br><br>
-        <label>Iznos kapaciteta \((C_1)\) :</label>
-        <input type="number" min="0" id="c1z11" placeholder="Iznos u [pF]"><br><br>
-        <label for="Otpor">Iznos otpora \((R_1)\) :</label>
+        <label>Iznos kapacitivnog otpora \((X_C)\) :</label>
+        <input type="number" min="0" id="x1z11" placeholder="Iznos u [Ω]"><br><br>
+        <label >Iznos otpora \((R_1)\) :</label>
         <input type="number" min="0" id="r1z11" placeholder="Iznos u [Ω]"><br><br>
         <button type="button" onclick="zadatak11()" >Calculate</button>
     </form>
 
     <form method="PUT"></form>
     <label><b>Struja izvora \((I)\) :</b></label>
-    <output id="iukz10"></output><br>
-    <label><b>Kapacitivni otpor \((X_{C1})\) :</b></label>
-    <output id="x1z10"></output><br>
-    <label><b>impendancija \((Z)\) :</b></label>
-    <output id="impz10"></output><br>
+    <output id="iukz11"></output><br>
+    <label><b>Prividni otpor \((Z)\) :</b></label>
+    <output id="potz11"></output><br>
+    <label><b>Prividna vodljivost \((Y)\) :</b></label>
+    <output id="pvz11"></output><br>
+    <label><b>Radna vodljivost \((G)\) :</b></label>
+    <output id="g1z11"></output><br>
+    <label><b>Kapacitivna vodljivost \((B_C)\) :</b></label>
+    <output id="b1z11"></output><br>
+    <label><b>Prividna snaga \((S)\) :</b></label>
+    <output id="psz11"></output><br>
+    <label><b>Radna snaga \((P)\) :</b></label>
+    <output id="rsz11"></output><br>
+    <label><b>Jalova snaga \((Q_C)\) :</b></label>
+    <output id="jsz11"></output><br>
 
 </div>
 <!--LABORATORIJ 11 KRAJ-->
+
+
+
+<div class="TaskContainer"> 
+    <p>6.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak12.png" >
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz12" placeholder="Iznos u [V]"><br><br>
+        <label>Iznos induktivnog otpora \((X_L)\) :</label>
+        <input type="number" min="0" id="x1z12" placeholder="Iznos u [Ω]"><br><br>
+        <label >Iznos otpora \((R_1)\) :</label>
+        <input type="number" min="0" id="r1z12" placeholder="Iznos u [Ω]"><br><br>
+        <button type="button" onclick="zadatak12()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz12"></output><br>
+    <label><b>Prividni otpor \((Z)\) :</b></label>
+    <output id="potz12"></output><br>
+    <label><b>Prividna vodljivost \((Y)\) :</b></label>
+    <output id="pvz12"></output><br>
+    <label><b>Radna vodljivost \((G)\) :</b></label>
+    <output id="g1z12"></output><br>
+    <label><b>Induktivna vodljivost \((B_L)\) :</b></label>
+    <output id="b1z12"></output><br>
+    <label><b>Prividna snaga \((S)\) :</b></label>
+    <output id="psz12"></output><br>
+    <label><b>Radna snaga \((P)\) :</b></label>
+    <output id="rsz12"></output><br>
+    <label><b>Jalova snaga \((Q_C)\) :</b></label>
+    <output id="jsz12"></output><br>
+
+</div>
+<!--LABORATORIJ 12 KRAJ-->
+
+
+
+<div class="TaskContainer"> 
+    <p>6.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak13.png" >
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz11" placeholder="Iznos u [V]"><br><br>
+        <label>Iznos kapacitivnog otpora \((X_C)\) :</label>
+        <input type="number" min="0" id="x1z11" placeholder="Iznos u [Ω]"><br><br>
+        <label >Iznos otpora \((R_1)\) :</label>
+        <input type="number" min="0" id="r1z11" placeholder="Iznos u [Ω]"><br><br>
+        <button type="button" onclick="zadatak13()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz11"></output><br>
+    <label><b>Prividni otpor \((Z)\) :</b></label>
+    <output id="potz11"></output><br>
+    <label><b>Prividna vodljivost \((Y)\) :</b></label>
+    <output id="pvz11"></output><br>
+    <label><b>Radna vodljivost \((G)\) :</b></label>
+    <output id="g1z11"></output><br>
+    <label><b>Kapacitivna vodljivost \((B_C)\) :</b></label>
+    <output id="b1z11"></output><br>
+    <label><b>Prividna snaga \((S)\) :</b></label>
+    <output id="psz11"></output><br>
+    <label><b>Radna snaga \((P)\) :</b></label>
+    <output id="rsz11"></output><br>
+    <label><b>Jalova snaga \((Q_C)\) :</b></label>
+    <output id="jsz11"></output><br>
+
+</div>
+<!--LABORATORIJ 13 KRAJ-->
+
+
+
+<div class="TaskContainer"> 
+    <p>6.Unesite vrijednosti napona izvora \((U)\), iznos otpora \((R_1)\), 
+        iznos otpora \((R_2)\) i iznos otpora \((R_3)\). </p>
+        <img src="slike/Zadatak14.png" >
+    <form method="POST">
+        <label>Napon izvora \((U)\) :</label>
+        <input type="number" min="0" id="uukz11" placeholder="Iznos u [V]"><br><br>
+        <label>Iznos kapacitivnog otpora \((X_C)\) :</label>
+        <input type="number" min="0" id="x1z11" placeholder="Iznos u [Ω]"><br><br>
+        <label >Iznos otpora \((R_1)\) :</label>
+        <input type="number" min="0" id="r1z11" placeholder="Iznos u [Ω]"><br><br>
+        <button type="button" onclick="zadatak14()" >Calculate</button>
+    </form>
+
+    <form method="PUT"></form>
+    <label><b>Struja izvora \((I)\) :</b></label>
+    <output id="iukz11"></output><br>
+    <label><b>Prividni otpor \((Z)\) :</b></label>
+    <output id="potz11"></output><br>
+    <label><b>Prividna vodljivost \((Y)\) :</b></label>
+    <output id="pvz11"></output><br>
+    <label><b>Radna vodljivost \((G)\) :</b></label>
+    <output id="g1z11"></output><br>
+    <label><b>Kapacitivna vodljivost \((B_C)\) :</b></label>
+    <output id="b1z11"></output><br>
+    <label><b>Prividna snaga \((S)\) :</b></label>
+    <output id="psz11"></output><br>
+    <label><b>Radna snaga \((P)\) :</b></label>
+    <output id="rsz11"></output><br>
+    <label><b>Jalova snaga \((Q_C)\) :</b></label>
+    <output id="jsz11"></output><br>
+
+</div>
+<!--LABORATORIJ 14 KRAJ-->
 
 
 

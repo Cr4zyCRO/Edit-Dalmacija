@@ -21,13 +21,7 @@ function zadatak1(){
     document.getElementById("padnapona1").innerHTML = rjesi(padnapona1) + " V";
     var padnapona2 = ukupnastruja * otpor2;
     document.getElementById("padnapona2").innerHTML = rjesi(padnapona2) + " V";
-            
-    console.log (ukupnastruja);
-    console.log (otpor1);
-    console.log (otpor2);
-    console.log (ukupninapon);
-    console.log (padnapona1);
-    console.log (padnapona2);       
+     
 }
 
 
@@ -51,16 +45,6 @@ function zadatak2(){
     document.getElementById("strujar2").innerHTML = rjesi(strujar2) + "A";
     var strujar3 = uuk / r3;
     document.getElementById("strujar3").innerHTML = rjesi(strujar3) + "A";
-
-    console.log (uuk);
-    console.log (r1);
-    console.log (r2);
-    console.log (r3);
-    console.log (ruk);
-    console.log (iuk);
-    console.log (strujar1); 
-    console.log (strujar2); 
-    console.log (strujar3); 
 
 }
 
@@ -111,25 +95,7 @@ function zadatak3(){
     document.getElementById("ir2z3").innerHTML =rjesi(ir2z3) + " A";
     var ir1z3 = ur123z3 / r1z3;
     document.getElementById("ir1z3").innerHTML =rjesi(ir1z3) + " A";
-    
-    console.log (uukz3);
-    console.log (r1z3);
-    console.log (r2z3);
-    console.log (r3z3);
-    console.log (r4z3);
-    console.log (r12z3);
-    console.log (r123z3);
-    console.log (rukz3);
-    console.log (iukz3);
-    console.log (ir4z3);
-    console.log (ir123z3);
-    console.log (ur4z3);
-    console.log (ur3z3);
-    console.log (ur12z3);
-    console.log (ir3z3);
-    console.log (ir12z3);
-    console.log (ir2z3);
-    console.log (ir1z3);
+
 }
 
 
@@ -298,21 +264,22 @@ function zadatak9(){
 // Laboratorijski zadatak 10
 function zadatak10(){
     let uukz10 = getVal("uukz10");
-    let fz10 = getVal("fz10");
-    let c1z10 = getVal("c1z10");
+    let x1z10 = getVal("x1z10");
     let r1z10 = getVal("r1z10");
 
-    var c1z10pf = c1z10 * Math.pow(10, -9);
-    var oz10 = 2 * Math.PI * fz10;
-    var x1z10 = 1 / (oz10 * c1z10pf);
-    document.getElementById("x1z10").innerHTML = rjesi(x1z10) + " Ω";
-
+    
     var impz10 = Math.sqrt(Math.pow(r1z10, 2) + Math.pow(x1z10, 2));
-    document.getElementById("impz10").innerHTML = rjesi(impz10) + " Ω";
-
     var iukz10 = uukz10 / impz10;
-    document.getElementById("iukz10").innerHTML = rjesi(iukz10) + " A";
+    var rsz10 = Math.pow(uukz10, 2) / r1z10;
+    var jsz10 = Math.pow(uukz10, 2) / x1z10;
+    var psz10 = Math.pow(uukz10, 2) / impz10;
 
+    document.getElementById("iukz10").innerHTML = rjesi(iukz10) + " A";
+    document.getElementById("impz10").innerHTML = rjesi(impz10) + " Ω";
+    document.getElementById("rsz10").innerHTML = rjesi(rsz10) + " W";
+    document.getElementById("jsz10").innerHTML = rjesi(jsz10) + " VAr";
+    document.getElementById("psz10").innerHTML = rjesi(psz10) + " VA";
+    
 }
 
 
@@ -320,19 +287,53 @@ function zadatak10(){
 // Laboratorijski zadatak 11
 function zadatak11(){
     let uukz11 = getVal("uukz11");
-    let fz11 = getVal("fz11");
-    let c1z11 = getVal("c1z11");
+    let x1z11 = getVal("x1z11");
     let r1z11= getVal("r1z11");
 
-    var c1z11pf = c1z11 * Math.pow(10, -9);
-    var oz11 = 2 * Math.PI * fz11;
-    var x1z11 = 1 / (oz11 * c1z11pf);
-    document.getElementById("x1z11").innerHTML = rjesi(x1z11) + " Ω";
+    var b1z11 = 1 / x1z11 ;
+    var g1z11 = 1 / r1z11;
+    var pvz11 = Math.sqrt(Math.pow(b1z11, 2) + Math.pow(g1z11, 2));
+    var potz11 =1 / pvz11;
+    var iukz11 = uukz11 / potz11;
+    var rsz11 = Math.pow(uukz11, 2) / r1z11;
+    var jsz11 = Math.pow(uukz11, 2) / x1z11;
+    var psz11 = Math.pow(uukz11, 2) / potz11;
 
-    var admz11 = Math.sqrt(Math.pow(r1z11, 2) + Math.pow(x1z11, 2));
-    document.getElementById("impz10").innerHTML = rjesi(impz10) + " Ω";
+    document.getElementById("iukz11").innerHTML = rjesi(iukz11) + " A";
+    document.getElementById("potz11").innerHTML = rjesi(potz11) + " Ω";
+    document.getElementById("pvz11").innerHTML = rjesi(pvz11) + " S";
+    document.getElementById("g1z11").innerHTML = rjesi(g1z11) + " S";
+    document.getElementById("b1z11").innerHTML = rjesi(b1z11) + " S";
+    document.getElementById("rsz11").innerHTML = rjesi(rsz11) + " W";
+    document.getElementById("jsz11").innerHTML = rjesi(jsz11) + " VAr";
+    document.getElementById("psz11").innerHTML = rjesi(psz11) + " VA";
 
-    var iukz10 = uukz10 / impz10;
-    document.getElementById("iukz10").innerHTML = rjesi(iukz10) + " A";
+}
+
+
+
+// Laboratorijski zadatak 12
+function zadatak12(){
+    let uukz12 = getVal("uukz12");
+    let x1z12 = getVal("x1z12");
+    let r1z12= getVal("r1z12");
+
+    var b1z12 = 1 / x1z12 ;
+    var g1z12 = 1 / r1z12;
+    var pvz12 = Math.sqrt(Math.pow(b1z12, 2) + Math.pow(g1z12, 2));
+    var potz12 =1 / pvz12;
+    var iukz12 = uukz12 / potz12;
+    var rsz12 = Math.pow(uukz12, 2) / r1z12;
+    var jsz12 = Math.pow(uukz12, 2) / x1z12;
+    var psz12 = Math.pow(uukz12, 2) / potz12;
+
+    document.getElementById("iukz12").innerHTML = rjesi(iukz12) + " A";
+    document.getElementById("potz12").innerHTML = rjesi(potz12) + " Ω";
+    document.getElementById("pvz12").innerHTML = rjesi(pvz12) + " S";
+    document.getElementById("g1z12").innerHTML = rjesi(g1z12) + " S";
+    document.getElementById("b1z12").innerHTML = rjesi(b1z12) + " S";
+    document.getElementById("rsz12").innerHTML = rjesi(rsz12) + " W";
+    document.getElementById("jsz12").innerHTML = rjesi(jsz12) + " VAr";
+    document.getElementById("psz12").innerHTML = rjesi(psz12) + " VA";
 
 }
