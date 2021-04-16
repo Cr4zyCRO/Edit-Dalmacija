@@ -1,3 +1,4 @@
+
 function vjezba1(){
     let odgovor1 = Number(prompt("Kolko si dobio ukupni otpor je "))
  
@@ -367,35 +368,64 @@ function vjezba20(){
         }
 }
 function vjezba21(){
-    let odgovor21a = Number(prompt("Koliki je kapacitet kondezatora C4(vrijednost u mikroF)"))
+    let odgovor21a = Number(document.getElementById("21a").value)
        
         if (odgovor21a == 2) {
-            alert("Točno riješen zadatak")
+            document.getElementById("kapacitetc4").innerHTML = "Točan"
         } else {
-            alert("Ovaj zadatak je netočno riješen")
+            document.getElementById("kapacitetc4").innerHTML = "Netočan"
         }
 }
 function vjezba22(){
-    let odgovor22a = Number(prompt("Unesi akumuliranu enrergiju kondezatora A2 je (vrijednos u mJ)"))
+    let odgovor22a = Number(document.getElementById("22a".value))
 
         if (odgovor22a == 8) {
-            alert("Akumulirana enrgija A2 je točna")
+            document.getElementById("energija").innerHTML = "Točan "
         } else {
-            alert("Netočno izračunata akumulirana energija")
+            document.getElementById("energija").innerHTML = "Netočan"
         }
 }
 function vjezba23(){
-    let odgovor23a = Number(prompt("Unesi vrijednost kapaciteta kondezatora C1 (u mikroF)"))
-    let odgovor23b = Number(prompt("i vrijednost kapaciteta C2"))
+    let odgovor23a = Number(document.getElementById("23a").value);
+    let odgovor23b = Number(document.getElementById("23b").value);
 
         if (odgovor23a == 20) {
-            alert("C1 je točan")
+            document.getElementById("kapacitetc1").innerHTML = "Točan odgovor"
         } else {
-            alert("C1 je netočan")
+            document.getElementById("kapacitetc1").innerHTML = "Netočan odgovor"
         }
         if (odgovor23b == 30) {
-            alert("Točno odgovoreno za C2")
+           document.getElementById("kapacitetc2").innerHTML = "Točan odgovor"
         } else {
-            alert("Netočno određen C2")
+            document.getElementById("kapacitetc2").innerHTML = "Netočan odgovor"
+        }
+function vjezba24(){
+    let prividnasnaga = Number(document.getElementById("24a").value);
+    let radnasnaga = Number(document.getElementById("24b").value);
+    let jalovasnaga = Number(document.getElementById("24c").value);
+    let faktorsnage = Number(document.getElementById("24d").value);
+
+        if (prividnasnaga == 880) {
+            document.getElementById("prividnasnaga").innerHTML = "Točan odgovor"
+        } else {
+            document.getElementById("prividnasnaga").innerHTML = "Netočan odgovor"
+        }
+        if (radnasnaga == 384) {
+            document.getElementById("radnasnaga").innerHTML = "Točan odgovor"
+        } else {
+            document.getElementById("radnasnaga").innerHTML = "Netočan odgovor"
+        }
+        if (jalovasnaga == 792 ) {
+            document.getElementById("jalovasnaga").innerHTML = "Točan odgovor"
+        } else {
+            document.getElementById("jalovasnaga").innerHTML = "Netočan odgovor"
+        }
+        if (faktorsnage == 0.436) {
+            document.getElementById("faktorsnage").innerHTML = "Točan odgovor"
+        } else {
+            document.getElementById("faktorsnage").innerHTML = "Netočan odgovor"
         }
 }
+}
+    
+        

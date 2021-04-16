@@ -14,7 +14,6 @@
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <title>Vježba</title>
    
 </head>
@@ -113,25 +112,80 @@
                        kondezatoru C3 U3= 30 V. koliko je kapacitet kondezatora C1.</p>
                             <img src="slike/vjezba38.jpg" width="340" height="270">
                                 <button onclick="vjezba38()">Provjeri</button>
-                <p>519.U shemi spoja prikazanoj na slici poznati su kapaciteti kondezatora C1 = 10 pF, C2= 20 pF, C4= 20 pF
+                <p>20.U shemi spoja prikazanoj na slici poznati su kapaciteti kondezatora C1 = 10 pF, C2= 20 pF, C4= 20 pF
                        naboj kondezatora Q3= 40 pC i ukupni kapacitet spoja C= 50 pF priključeni su na napon izvora U= 3 V
                        Odredite vrijednost kapaciteta C3 i C5</p>
                             <img src="slike/vjezba20.jpg" width="340" height="270">
                                 <button onclick="vjezba20()">Provjeri</button>
-                <p>531.Poznati su kapaciteti C1= 3 mikroF, C2= 4 mikroF, C3= 5 mikroF, C5= 6 mikroF i C6= 4.8 mikroF  te naboj četvrtog kondezatora
-                       Q4= 30 mikroC. Napon priključka je U= 50 V. Koliki je kapacitet C4 </p>
-                            <img src="slike/vjezba21.jpg" width="340" height="270">
-                                <button onclick="vjezba21()">Provjeri</button>
-                <p>533.U shemi spoja poznati su kapaciteti C1= 16 mikroF i C3= 14 mikroF, a naboj prvog kondezaotra Q1= 960 mikroC. Odredite 
-                       elektrostatsku energiju polja kondezatora A2. Napon izvora je U= 100 V</p>
-                            <img src="slike/vjezba22.jpg" width="340" height="270">
-                                <button onclick="vjezba22()">Provjeri</button>
-                <p>535.Tri kondezatora spojena su serijski prema slici. Poznate su akumulirane energije prvog i drugog kondezatora A1= 81 mJ i A2= 54 mJ
-                       i kapacitet trećeg kondezatora C3= 8 mikroF te napon izvora U= 375 V. Odredite kapacitet prvog i drugog kondezatora C1 i C2 </p>
-                            <img src="slike/vjezba23.jpg" width="340" height="270">
-                                <button onclick="vjezba23()">Provjeri</button>
+            <div class="TaskContainer">
+                <p>21.Poznati su kapaciteti C1= 3 mikroF, C2= 4 mikroF, C3= 5 mikroF, C5= 6 mikroF i C6= 4.8 mikroF  te naboj četvrtog kondezatora
+                     Q4= 30 mikroC. Napon priključka je U= 50 V. Koliki je kapacitet C4 </p>
+                                    <img src="slike/vjezba21.jpg" width="340" height="270">
+                        <form method="POST">
+                            <label for="Kapacitet">Kapacitet C4 (vrijdnost u mikroF)</label>
+                                <input type="number" name="21a" id="21a">
+                                    <button onclick="vjezba21()">Provjeri</button>
+                            </form> 
+                            <form method="PUT"></form>
+                                <label for="Kapaciet">Odgovor je </label>
+                                    <output id="kapacitetc4"></output>
+            </div>
+            <div class="TaskContainer">
+                <p>22.U shemi spoja poznati su kapaciteti C1= 16 mikroF i C3= 14 mikroF, a naboj prvog kondezaotra Q1= 960 mikroC. Odredite 
+                    elektrostatsku energiju polja kondezatora A2. Napon izvora je U= 100 V</p>
+                                    <img src="slike/vjezba22.jpg" width="340" height="270">
+                        <form method="POST">
+                            <label for="Energija">Elektrostatska energija (vrijednost u mJ)</label>
+                                <input type="number" name="22a" id="22a">
+                                    <button onclick="vjezba22()">Provjeri</button>
+                        </form>
+                        <form method="PUT"></form>
+                            <label for="Energija">Odgovor je </label>
+                                <output id="energija"></output><br>
+            </div>
+            <div class="TaskContainer">
+                <p>23.Tri kondezatora spojena su serijski prema slici. Poznate su akumulirane energije prvog i drugog kondezatora A1= 81 mJ i A2= 54 mJ
+                    i kapacitet trećeg kondezatora C3= 8 mikroF te napon izvora U= 375 V. Odredite kapacitet prvog i drugog kondezatora C1 i C2 </p>
+                                    <img src="slike/vjezba23.jpg" width="340" height="270">
+                        <form  method="POST">
+                            <label for="Kapacitet">Kapacitet C1</label>
+                                <input type="number" name="23a" id="23a">
+                            <label for="Kapaciet">Kapacitet C2</label>
+                                <input type="number" name="23b" id="23b">
+                                    <button onclick="vjezba23()">Provjeri</button>     
+                        </form>
+                        <form method="PUT"></form>
+                            <label for="Kapacitet"><b>Kapaciet C1</b></label>
+                                <output id="kapacitetc1"></output><br>
+                            <label for="Kapacitet"><b>Kapacitet C2</b></label>
+                                <output id="kapacitetc2"></output><br>
+            </div>
+        <p>Induktivna trošila</p>
+            <div class="TaskContainer">
+                <p>24. Radni otpor R= 24 Ω i induktivnog otpora Xl= 49.5 Ω spojeni su serijski na izmjenični napon 220 V. Odredit
+                       prividnu, radnu. i jalovu snagu, te faktor snage spoja</p>
+                        <form  method="POST">
+                            <label for="Snaga">Prividna snaga</label>
+                                <input type="number" name="24a" id="24a"><br>
+                            <label for="Snaga">Radna snaga</label>
+                                <input type="number" name="24b" id="24b"><br>
+                            <label for="Snaga">Jalova snaga</label>
+                                <input type="number" name="24c" id="24c"><br>>
+                            <label for="Snaga"> Faktor snage</label>
+                                <input type="number" name="24d" id="24d"><br>
+                                    <button onclick="vjezba24()">Provjeri</button>
+                        </form>
+                        <form method="PUT"></form>
+                            <label for="Snaga"><b> Prividna snaga </b> </label>
+                                <output id="prividnasnaga"></output><br>
+                            <label for="Snaga"><b>Radna snaga</b></label>
+                                <output id="radnasnaga"></output><br>
+                            <label for="Snaga"><b>Jalova snaga</b></label>
+                                <output id="jalovasnaga"></output><br>
+                            <label for="Snaga"><b>Faktor snage</b></label>
+                                <output id="faktorsnage"></output><br>
+            </div>
 
-                
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> 
     <path fill="#81d4fa" fill-opacity="1" d="M0,32L34.3,32C68.6,32,137,32,206,58.7C274.3,85,343,139,411,138.7C480,139,549,85,617,85.3C685.7,85,754,139,823,149.3C891.4,160,960,128,1029,112C1097.1,96,1166,96,1234,90.7C1302.9,85,1371,75,1406,69.3L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
 </svg>
