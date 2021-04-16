@@ -20,9 +20,9 @@ body {
 }
 
 .ExamplePicture {
-  float: center;
+  text-align: center;
   margin: 30px 12px 3px 4px;
-  border: 2px solid blue;
+  border: 2px;
   width: 500px;
 }
 

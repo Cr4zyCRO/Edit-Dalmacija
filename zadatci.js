@@ -1,5 +1,4 @@
 M.AutoInit();
-$(".dropdown-trigger").dropdown();
 
 const getVal=(id)=>{
     return  Math.abs(Number((document.getElementById(id).value)));
@@ -7,6 +6,11 @@ const getVal=(id)=>{
 const rjesi=(nesto)=>{
     return nesto- nesto.toFixed(4)?nesto.toFixed(4):nesto;
 }
+
+const pico=(nesto)=>{
+    return nesto- nesto.toFixed(9)?nesto.toFixed(9):nesto;
+}
+
 
 
 
@@ -112,14 +116,14 @@ function zadatak4(){
 
     var cukz4zbroj= c1z4 + c2z4 + c3z4;
     var cukz4umnozak=c1z4 * c2z4 * c3z4;
-    var cukz4 = cukz4umnozak / cukz4zbroj;
+    var cukz4 = (cukz4umnozak / cukz4zbroj) * Math.pow(10,-9);
     var qukz4 = uukz4 * cukz4;
 
-    document.getElementById("cukz4").innerHTML = cukz4 + " F";
-    document.getElementById("qukz4").innerHTML = qukz4 + " As";
-    document.getElementById("q1z4").innerHTML = qukz4 + " As";
-    document.getElementById("q2z4").innerHTML = qukz4 + " As";
-    document.getElementById("q3z4").innerHTML = qukz4 + " As";
+    document.getElementById("cukz4").innerHTML = pico(cukz4) + " F";
+    document.getElementById("qukz4").innerHTML = pico(qukz4) + " As";
+    document.getElementById("q1z4").innerHTML = pico(qukz4) + " As";
+    document.getElementById("q2z4").innerHTML = pico(qukz4) + " As";
+    document.getElementById("q3z4").innerHTML = pico(qukz4) + " As";
 }
 
 
@@ -131,17 +135,17 @@ function zadatak5(){
     let c2z5 = getVal("c2z5");
     let c3z5 = getVal("c3z5");
 
-    var cukz5 = c1z5+c2z5+c3z5 ;
+    var cukz5 = (c1z5+c2z5+c3z5) * Math.pow(10,-9);
     var qukz5 = uukz5 * cukz5;
-    var q1z5 = uukz5 * c1z5;
-    var q2z5 = uukz5 * c2z5;
-    var q3z5 = uukz5 * c3z5;
+    var q1z5 = uukz5 * (c1z5 * Math.pow(10,-9));
+    var q2z5 = uukz5 * (c2z5 * Math.pow(10,-9));
+    var q3z5 = uukz5 * (c3z5 * Math.pow(10,-9));
 
-    document.getElementById("cukz5").innerHTML = cukz5 + " F";
-    document.getElementById("qukz5").innerHTML = qukz5 + " As";
-    document.getElementById("q1z5").innerHTML = q1z5  + " As";
-    document.getElementById("q2z5").innerHTML = q2z5  + " As";
-    document.getElementById("q3z5").innerHTML = q3z5  + " As";
+    document.getElementById("cukz5").innerHTML = pico(cukz5) + " F";
+    document.getElementById("qukz5").innerHTML = pico(qukz5) + " As";
+    document.getElementById("q1z5").innerHTML = pico(q1z5)  + " As";
+    document.getElementById("q2z5").innerHTML = pico(q2z5)  + " As";
+    document.getElementById("q3z5").innerHTML = pico(q3z5)  + " As";
 
 }
 
@@ -160,9 +164,9 @@ function zadatak6(){
 
     var cukz6umnozak = c1z6 * c2z6 * c3z6 * c4z6 * c5z6 * c6z6;
     var cukz6zbroj = c1z6 * c2z6 * c3z6 * c4z6 * c5z6 * c6z6;
-    var cukz6 = cukz6umnozak / cukz6zbroj;
+    var cukz6 = (cukz6umnozak / cukz6zbroj);
     var oz6 = 2 * Math.PI * fz6;
-    var xukz6 = (1 / oz6 * cukz6);
+    var xukz6 = (1 / (oz6 * cukz6));
     var x1z6 = (1 / (oz6 * c1z6));
     var x2z6 = (1 / (oz6 * c2z6));
     var x3z6 = (1 / (oz6 * c3z6));
