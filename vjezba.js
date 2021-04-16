@@ -317,61 +317,61 @@ function vjezba16(){
         }
 }
 function vjezba17(){
-    let vjezba17a = Number(prompt("Tvoj rezultat za Q4 je ? (rezultat unesi u pikoculonima)"))
-    let vjezba17b = Number(prompt("Koliki je napon na kondezatoru C6 "))
+    let vjezba17a = Number(document.getElementById("17a").value);
+    let vjezba17b = Number(document.getElementById("17b").value);
 
         if (vjezba17a == 412.5) {
-            alert("Točno si izračunao Q4")
+            document.getElementById("nabojq1").innerHTML = "Točan"
         } else {
-            alert("Netočan odgovor za Q4")
+            document.getElementById("nabojq1").innerHTML = "Netočan"
         }
         if (vjezba17b == 68.75) {
-            alert("Točan odgovr za U6")
+            document.getElementById("napon6").innerHTML = "Točan"
         } else {
-            alert("Negdje si pogriješio odgovor je netočan za U6")
+            document.getElementById("napon6").innerHTML = "Netočan"
         }
 }
 function vjezba18(){
-    let vjezba18a = Number(prompt("Po tvojim proračunima C2 jen(u mikrofaradima")) 
-    let vjezba18b = Number(prompt("i C3 je (u mikrofaradima"))
+    let vjezba18a = Number(document.getElementById("18a").value); 
+    let vjezba18b = Number(document.getElementById("18b").value);
 
         if (vjezba18a == 20) {
-            alert("Bravo za točno izračunat C2")
+            document.getElementById("kapacitetc2").innerHTML = "Točan"
         } else {
-            alert("Tvoj rezultat za C2 nije dobar")
+            document.getElementById("kapacitetc2").innerHTML = "Netočan"
         }
         if (vjezba18b == 0.6) {
-            alert("Točan odgovor za C3")
+            document.getElementById("kapacitetc3").innerHTML = "Točan"
         } else {
-            alert("Nažalost si krivo odgovrio za C3")
+            document.getElementById("kapacitetc3").innerHTML = "Netočan"
         }
 }
 function vjezba19(){
-    let vjezba19a = Number(prompt("koliki je kapacitet C1 (Unesite vrijednost u nF)"))
+    let vjezba19a = Number(document.getElementById("19a").value);
 
         if (vjezba19a == 30) {
-            alert("Točan odgovor")
+            document.getElementById("kapacitec1").innerHTML = "Točan"
         } else {
-            alert("Neuspiješno si riješio zadatak")
+            document.getElementById("kapacitec1").innerHTML = "Netočan"
         }
 }
 function vjezba20(){
-    let odgovor20a = Number(prompt("Unesi kapacitet C3 (vrijednost u pF)"))
-    let odgovor20b = Number(prompt("i vrijdenost kapaciteta C5 (vrijednost u pF)"))
+    let odgovor20a = Number(document.getElementById("20a").value);
+    let odgovor20b = Number(document.getElementById("20b").value);
 
         if (odgovor20a == 40 ) {
-            alert("Točno si izračunao kapacitet C3")
+            document.getElementById("kapacitetc3").innerHTML = "Točan"
         } else {
-            alert("Nažalost krivo si odgovorio za C3")
+            document.getElementById("kapacitetc3").innerHTML = "Netočan"
         }
         if (odgovor20b == 30) {
-            alert("Tvoj rezultat za C5 je točan ")
+            document.getElementById("kapacitetc5").innerHTML = "Točan"
         } else {
-            alert("Netočan odgovor za C5")
+            document.getElementById("kapacitetc5").innerHTML = "Netočan"
         }
 }
 function vjezba21(){
-    let odgovor21a = Number(document.getElementById("21a").value)
+    let odgovor21a = Number(document.getElementById("21a").value);
        
         if (odgovor21a == 2) {
             document.getElementById("kapacitetc4").innerHTML = "Točan"
@@ -380,7 +380,7 @@ function vjezba21(){
         }
 }
 function vjezba22(){
-    let odgovor22a = Number(document.getElementById("22a".value))
+    let odgovor22a = Number(document.getElementById("22a".value));
 
         if (odgovor22a == 8) {
             document.getElementById("energija").innerHTML = "Točan "
